@@ -1,6 +1,7 @@
 import React from 'react';
 import LoginForm from '../LoginForm/LoginForm';
 import { useHistory } from 'react-router-dom';
+import Footer from '../Footer/Footer';
 
 function LoginPage() {
     const history = useHistory();
@@ -12,15 +13,16 @@ function LoginPage() {
             </center>
             <center>
                 Need an account?
-                <span
-                    className="btn btn_asLink"
+                <button
+                    className="btn_asLink"
                     onClick={() => {
                         history.push('/registration');
                     }}
                 >
                     Signup
-                </span>
+                </button>
             </center>
+            <Footer />
         </div>
     );
 }
