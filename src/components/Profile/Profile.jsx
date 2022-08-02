@@ -1,4 +1,5 @@
 import React from 'react';
+import Navbar from '../Navbar/Navbar';
 
 export default function Profile() {
     return (
@@ -9,6 +10,7 @@ export default function Profile() {
             >
                 Log Out
             </button>
+            <Navbar />
         </>
     );
 }

@@ -10,9 +10,7 @@ function LoginPage() {
     return (
         <div>
             <Header />
-            <center>
-                <LoginForm />
-            </center>
+            <LoginForm className="center" />
             <center>
                 Need an account?
                 <button

@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 
+import Profile from '../Profile/Profile';
 import Dashboard from '../Dashboard/Dashboard';
 import Practices from '../Practices/Practices';
 import LoginPage from '../LoginPage/LoginPage';
@@ -52,6 +53,14 @@ function App() {
                         <Practices />
                     </ProtectedRoute>
 
+                    <ProtectedRoute
+                        // logged in shows Profile else shows Profile
+                        exact
+                        path="/profile"
+                    >
+                        <Profile />
+                    </ProtectedRoute>
+
                     <Route exact path="/login">
                         {user.id ? (
                             // If the user is already logged in,
@@ -74,20 +83,20 @@ function App() {
                         )}
                     </Route>
 
-                    {/* <Route exact path="/home">
+                    <Route exact path="/home">
                         {user.id ? (
                             // If the user is already logged in,
                             // redirect them to the /user page
                             <Redirect to="/dashboard" />
                         ) : (
                             // Otherwise, show the Landing page
-                            <LandingPage />
+                            <LoginPage />
                         )}
-                    </Route> */}
+                    </Route>
 
                     {/* If none of the other routes matched, we will show a 404. */}
                     <Route>
-                        <h1>404</h1>
+                        <h1>404 ERROR</h1>
                     </Route>
                 </Switch>
             </div>
