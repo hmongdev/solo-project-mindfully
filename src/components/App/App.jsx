@@ -38,7 +38,7 @@ function App() {
                     <ProtectedRoute
                         // logged in shows Dashboard else shows LoginPage
                         exact
-                        path="/dash"
+                        path="/dashboard"
                     >
                         <Dashboard />
                     </ProtectedRoute>
@@ -55,7 +55,7 @@ function App() {
                         {user.id ? (
                             // If the user is already logged in,
                             // redirect to the /user page
-                            <Redirect to="/dash" />
+                            <Redirect to="/dashboard" />
                         ) : (
                             // Otherwise, show the login page
                             <LoginPage />
@@ -66,7 +66,7 @@ function App() {
                         {user.id ? (
                             // If the user is already logged in,
                             // redirect them to the /user page
-                            <Redirect to="/dash" />
+                            <Redirect to="/dashboard" />
                         ) : (
                             // Otherwise, show the registration page
                             <RegisterPage />
@@ -77,7 +77,7 @@ function App() {
                         {user.id ? (
                             // If the user is already logged in,
                             // redirect them to the /user page
-                            <Redirect to="/dash" />
+                            <Redirect to="/dashboard" />
                         ) : (
                             // Otherwise, show the Landing page
                             <LandingPage />

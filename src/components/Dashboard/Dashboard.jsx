@@ -1,12 +1,13 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './Dashboard.css';
+import '../Navbar/Navbar.css';
 import Navbar from '../Navbar/Navbar';
 
 function Dashboard() {
     const dispatch = useDispatch();
     return (
-        <div className="container">
+        <div>
             <h1 className="view-title center">Dashboard</h1>
             {/* Put this logout button on profile screen */}
             {/* <LogOutButton className="btn center" /> */}
