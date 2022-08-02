@@ -1,0 +1,29 @@
+div.quotes {
+    background: gray;
+    height: 30vh;
+    width: 80vw;
+    border-radius: 2rem;
+    padding: 1rem;
+}
+
+div.checkins {
+    background: gray;
+    height: 30vh;
+    width: 80vw;
+    border-radius: 2rem;
+    padding: 1rem;
+}
+
+blockquote,
+figcaption {
+    text-align: center;
+    padding: 1rem;
+}
+
+blockquote {
+    font-size: large;
+}
+
+figcaption {
+    font-size: medium;
+}

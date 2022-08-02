@@ -1,23 +1,30 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import './Dashboard.css';
+import '../Navbar/Navbar.css';
+import Navbar from '../Navbar/Navbar';
 
 function Dashboard() {
-    // this component doesn't do much to start, just renders some user reducer info to the DOM
-    const user = useSelector((store) => store.user);
     const dispatch = useDispatch();
     return (
-        <div className="container">
+        <div>
             <h1 className="view-title center">Dashboard</h1>
             {/* Put this logout button on profile screen */}
             {/* <LogOutButton className="btn center" /> */}
-            <div className="center">
-                <button
-                    className="btn"
-                    onClick={() => dispatch({ type: 'LOGOUT' })}
-                >
-                    Log Out
-                </button>
+            <div className="quotes center">
+                <blockquote>
+                    <q>
+                        Words can be like X-rays, if you use them
+                        properly—they’ll go through anything. You read and
+                        you’re pierced.
+                    </q>
+                </blockquote>
+                <figcaption>Author</figcaption>
+                <div>Date</div>
             </div>
+            <div className="view-title">Check-Ins</div>
+            <div className="checkins">CheckIn List</div>
+            <Navbar />
         </div>
     );
 }
