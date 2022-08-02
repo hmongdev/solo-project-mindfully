@@ -62,7 +62,7 @@ function RegisterForm() {
                     className="btn"
                     type="submit"
                     name="submit"
-                    value="signup"
+                    value="Sign Up"
                 />
             </div>
         </form>

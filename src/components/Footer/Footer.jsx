@@ -1,5 +1,4 @@
 import React from 'react';
-import './Footer.css';
 
 // This is one of our simplest components
 // It doesn't have local state, so it can be a function component.
@@ -8,9 +7,9 @@ import './Footer.css';
 
 function Footer() {
     return (
-        <footer>
+        <center>
             Read our <u>Terms</u> and <u>Privacy Policy</u>
-        </footer>
+        </center>
     );
 }
 

@@ -25,39 +25,41 @@ function LoginForm() {
     }; // end login
 
     return (
-        <form className="formPanel" onSubmit={login}>
-            {errors.loginMessage && (
-                <h3 className="alert" role="alert">
-                    {errors.loginMessage}
-                </h3>
-            )}
-            <div>
-                <input
-                    type="text"
-                    placeholder="username"
-                    required
-                    value={username}
-                    onChange={(event) => setUsername(event.target.value)}
-                />
-            </div>
-            <div>
-                <input
-                    type="password"
-                    placeholder="password"
-                    required
-                    value={password}
-                    onChange={(event) => setPassword(event.target.value)}
-                />
-            </div>
-            <div>
-                <input
-                    className="btn"
-                    type="submit"
-                    name="submit"
-                    value="login"
-                />
-            </div>
-        </form>
+        <div className="formPanel">
+            <form onSubmit={login}>
+                {errors.loginMessage && (
+                    <h3 className="alert" role="alert">
+                        {errors.loginMessage}
+                    </h3>
+                )}
+                <div>
+                    <input
+                        type="text"
+                        placeholder="username"
+                        required
+                        value={username}
+                        onChange={(event) => setUsername(event.target.value)}
+                    />
+                </div>
+                <div>
+                    <input
+                        type="password"
+                        placeholder="password"
+                        required
+                        value={password}
+                        onChange={(event) => setPassword(event.target.value)}
+                    />
+                </div>
+                <div>
+                    <input
+                        className="btn"
+                        type="submit"
+                        name="submit"
+                        value="login"
+                    />
+                </div>
+            </form>
+        </div>
     );
 }
 

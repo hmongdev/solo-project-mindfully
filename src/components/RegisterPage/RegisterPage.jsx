@@ -20,7 +20,7 @@ function RegisterPage() {
                         history.push('/login');
                     }}
                 >
-                    Login
+                    <u>Log In</u>
                 </button>
             </center>
             <Footer />
