@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 
+import Checkins from '../Checkins/Feeling';
 import Profile from '../Profile/Profile';
 import Dashboard from '../Dashboard/Dashboard';
 import Practices from '../Practices/Practices';
@@ -44,7 +45,6 @@ function App() {
                     >
                         <Dashboard />
                     </ProtectedRoute>
-
                     <ProtectedRoute
                         // logged in shows Practices else shows LoginPage
                         exact
@@ -52,15 +52,13 @@ function App() {
                     >
                         <Practices />
                     </ProtectedRoute>
-
-                    <ProtectedRoute
-                        // logged in shows Profile else shows Profile
-                        exact
-                        path="/profile"
-                    >
+                    //profile
+                    <ProtectedRoute exact path="/profile">
                         <Profile />
                     </ProtectedRoute>
-
+                    <ProtectedRoute exact path="/checkins/feeling">
+                        <Checkins />
+                    </ProtectedRoute>
                     <Route exact path="/login">
                         {user.id ? (
                             // If the user is already logged in,
@@ -71,7 +69,6 @@ function App() {
                             <LoginPage />
                         )}
                     </Route>
-
                     <Route exact path="/registration">
                         {user.id ? (
                             // If the user is already logged in,
@@ -82,7 +79,6 @@ function App() {
                             <RegisterPage />
                         )}
                     </Route>
-
                     <Route exact path="/home">
                         {user.id ? (
                             // If the user is already logged in,
@@ -93,7 +89,6 @@ function App() {
                             <LoginPage />
                         )}
                     </Route>
-
                     {/* If none of the other routes matched, we will show a 404. */}
                     <Route>
                         <h1>404 ERROR</h1>
