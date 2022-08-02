@@ -1,7 +1,6 @@
 import React from 'react';
-import Navbar from '../Navbar/Navbar';
 
-export default function Practices() {
+export default function Gratitude() {
     return (
         <div>
             <Navbar />

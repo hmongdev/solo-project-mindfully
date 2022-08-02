@@ -31,7 +31,7 @@ export default function Navbar() {
             <button
                 className="checkins"
                 onClick={() => {
-                    history.push('/checkins');
+                    history.push('/checkins/feeling');
                 }}
             >
                 <FormatListBulletedIcon style={{ fontSize: 60 }} />
