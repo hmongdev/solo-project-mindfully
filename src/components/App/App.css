@@ -22,7 +22,7 @@ body {
 .title {
     margin: auto;
     font-family: 'Square Peg', cursive;
-    color: #e6e6e6;
+    color: #fff;
     font-size: 10rem;
     padding: 2rem;
 }
@@ -137,10 +137,15 @@ input.btn {
 }
 
 input {
+    text-align: center;
     margin: 0.5rem;
     font-size: 3rem;
-    min-height: 2vh;
+    height: 6vh;
     border-radius: 1rem;
+}
+
+::-webkit-input-placeholder {
+    text-align: center;
 }
 
 center {

@@ -35,7 +35,7 @@ function LoginForm() {
                 <div>
                     <input
                         type="text"
-                        placeholder="username"
+                        placeholder="Username"
                         required
                         value={username}
                         onChange={(event) => setUsername(event.target.value)}
@@ -44,7 +44,7 @@ function LoginForm() {
                 <div>
                     <input
                         type="password"
-                        placeholder="password"
+                        placeholder="Password"
                         required
                         value={password}
                         onChange={(event) => setPassword(event.target.value)}
@@ -55,7 +55,7 @@ function LoginForm() {
                         className="btn"
                         type="submit"
                         name="submit"
-                        value="login"
+                        value="Log In"
                     />
                 </div>
             </form>
