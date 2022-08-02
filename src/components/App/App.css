@@ -128,19 +128,12 @@ Form Treatment
 }
 
 input,
-button {
-    width: 70vw;
-}
-
 input.btn {
     font-size: 3rem;
-}
-
-input {
+    height: 8vh;
+    width: 70vw;
     text-align: center;
     margin: 0.5rem;
-    font-size: 3rem;
-    height: 6vh;
     border-radius: 1rem;
 }
 
