@@ -2,27 +2,30 @@ import React from 'react';
 
 import { useHistory } from 'react-router-dom';
 import RegisterForm from '../RegisterForm/RegisterForm';
+import Footer from '../Footer/Footer';
 
 function RegisterPage() {
-  const history = useHistory();
+    const history = useHistory();
 
-  return (
-    <div>
-      <RegisterForm />
-
-      <center>
-        <button
-          type="button"
-          className="btn btn_asLink"
-          onClick={() => {
-            history.push('/login');
-          }}
-        >
-          Login
-        </button>
-      </center>
-    </div>
-  );
+    return (
+        <div>
+            <center>
+                <RegisterForm />
+            </center>
+            <center>
+                Have an account?
+                <button
+                    className="btn_asLink"
+                    onClick={() => {
+                        history.push('/login');
+                    }}
+                >
+                    <u>Log In</u>
+                </button>
+            </center>
+            <Footer />
+        </div>
+    );
 }
 
 export default RegisterPage;
