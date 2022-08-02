@@ -8,7 +8,7 @@ function Dashboard() {
     const dispatch = useDispatch();
     return (
         <div>
-            <h1 className="view-title center">Dashboard</h1>
+            <div className="view-title center">Dashboard</div>
             {/* Put this logout button on profile screen */}
             {/* <LogOutButton className="btn center" /> */}
             <div className="quotes center">
@@ -22,7 +22,7 @@ function Dashboard() {
                 <figcaption>Author</figcaption>
                 <div>Date</div>
             </div>
-            <div className="view-title">Check-Ins</div>
+            <div className="view-title center">Check-Ins</div>
             <div className="checkins">CheckIn List</div>
             <Navbar />
         </div>
