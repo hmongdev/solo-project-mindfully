@@ -10,6 +10,11 @@ body,
     font-size: 62.5%;
 }
 
+div {
+    margin: auto;
+    text-align: center;
+}
+
 h3.alert {
     font-size: 2rem;
 }
