@@ -15,7 +15,7 @@ h3.alert {
 }
 
 body {
-    margin: 0rem;
+    margin: 0;
     background: linear-gradient(#58b5e3, #0c4fea);
 }
 
@@ -128,20 +128,17 @@ Form Treatment
 }
 
 input,
-button {
-    width: 70vw;
-}
-
 input.btn {
     font-size: 3rem;
-}
-
-input {
+    width: 70vw;
     text-align: center;
     margin: 0.5rem;
-    font-size: 3rem;
-    height: 6vh;
     border-radius: 1rem;
+}
+
+input,
+input.btn {
+    height: 8vh;
 }
 
 ::-webkit-input-placeholder {

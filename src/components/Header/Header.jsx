@@ -1,7 +1,7 @@
 import React from 'react';
-import './Nav.css';
+import './Header.css';
 
-export default function Nav() {
+export default function Header() {
     return (
         <div className="nav">
             <h1 className="title">mindfully</h1>
