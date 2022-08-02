@@ -1,6 +1,7 @@
 import React from 'react';
 import LoginForm from '../LoginForm/LoginForm';
 import { useHistory } from 'react-router-dom';
+import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 
 function LoginPage() {
@@ -8,6 +9,7 @@ function LoginPage() {
 
     return (
         <div>
+            <Header />
             <center>
                 <LoginForm />
             </center>
