@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 
 import Dashboard from '../Dashboard/Dashboard';
+import Practices from '../Practices/Practices';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 
@@ -43,13 +44,13 @@ function App() {
                         <Dashboard />
                     </ProtectedRoute>
 
-                    {/* <ProtectedRoute
-                        // logged in shows InfoPage else shows LoginPage
+                    <ProtectedRoute
+                        // logged in shows Practices else shows LoginPage
                         exact
-                        path="/info"
+                        path="/practices"
                     >
-                        <InfoPage />
-                    </ProtectedRoute> */}
+                        <Practices />
+                    </ProtectedRoute>
 
                     <Route exact path="/login">
                         {user.id ? (
