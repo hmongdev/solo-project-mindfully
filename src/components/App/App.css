@@ -19,12 +19,25 @@ body {
     background: linear-gradient(#58b5e3, #0c4fea);
 }
 
-.title {
+.app-title {
     margin: auto;
     font-family: 'Square Peg', cursive;
     color: #fff;
     font-size: 10rem;
     padding: 2rem;
+}
+
+.view-title {
+    font-size: 3rem;
+    width: 80%;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    padding: 2rem;
+}
+
+.center {
+    margin: auto;
+    text-align: center;
 }
 
 img {
@@ -45,11 +58,8 @@ Button
 -------------------------------------------------------------------------------- */
 
 .btn {
-    display: inline-block;
+    margin: auto;
     padding: 1rem 20px;
-    /* border-color: #014041; */
-    border-width: 0.1rem 0.1rem 0.3rem;
-    width: 31.5rem;
     background: linear-gradient(to right, #0684f9, #7f579f);
     border-radius: 2rem;
     color: #f8f8f8;
@@ -58,21 +68,6 @@ Button
     border: none;
     box-shadow: 0.2rem 0.2rem 1rem black;
     cursor: pointer;
-}
-
-.btn_sizeMin {
-    min-height: 5rem;
-    min-width: 10rem;
-}
-
-.btn_sizeSm {
-    padding: 1rem 1.5rem;
-    font-size: 0.8rem;
-}
-
-.btn_sizeFull {
-    display: block;
-    width: 100vw;
 }
 
 .btn:hover {
