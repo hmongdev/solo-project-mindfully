@@ -10,7 +10,9 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 
-import Checkins from '../Checkins/Feeling';
+import Feeling from '../Feeling/Feeling';
+import Reflection from '../Reflection/Reflection';
+import Gratitude from '../Gratitude/Gratitude';
 import Profile from '../Profile/Profile';
 import Dashboard from '../Dashboard/Dashboard';
 import Practices from '../Practices/Practices';
@@ -56,8 +58,14 @@ function App() {
                     <ProtectedRoute exact path="/profile">
                         <Profile />
                     </ProtectedRoute>
-                    <ProtectedRoute exact path="/checkins/feeling">
-                        <Checkins />
+                    <ProtectedRoute exact path="/feeling">
+                        <Feeling />
+                    </ProtectedRoute>
+                    <ProtectedRoute exact path="/reflection">
+                        <Reflection />
+                    </ProtectedRoute>
+                    <ProtectedRoute exact path="/gratitude">
+                        <Gratitude />
                     </ProtectedRoute>
                     <Route exact path="/login">
                         {user.id ? (
