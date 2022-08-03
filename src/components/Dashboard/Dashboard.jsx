@@ -4,14 +4,12 @@ import './Dashboard.css';
 import '../Navbar/Navbar.css';
 import Navbar from '../Navbar/Navbar';
 import CheckinsList from '../CheckinsList/CheckinsList';
-import Quotes from '../Quotes/Quotes';
 
 function Dashboard() {
     const dispatch = useDispatch();
     return (
         <div>
-            <p className="view-title center">Dashboard</p>
-            <Quotes />
+            {/* <p className="view-title center">Dashboard</p> */}
             <CheckinsList />
             <Navbar />
         </div>
