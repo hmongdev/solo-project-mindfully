@@ -19,6 +19,7 @@ export default function Navbar() {
                 }}
             >
                 <HomeIcon style={{ fontSize: 60 }} />
+                Home
             </button>
             <button
                 onClick={() => {
@@ -26,6 +27,7 @@ export default function Navbar() {
                 }}
             >
                 <PsychologyIcon style={{ fontSize: 60 }} />
+                Practices
             </button>
             <button
                 onClick={() => {
@@ -33,13 +35,15 @@ export default function Navbar() {
                 }}
             >
                 <AccountCircleIcon style={{ fontSize: 60 }} />
+                Profile
             </button>
             <button
                 onClick={() => {
-                    history.push('/checkins/feeling');
+                    history.push('/feeling');
                 }}
             >
                 <FormatListBulletedIcon style={{ fontSize: 60 }} />
+                Checkins
             </button>
         </div>
     );
