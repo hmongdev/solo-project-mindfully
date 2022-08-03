@@ -1,14 +1,6 @@
-div.quotes {
+.history-container {
     background: gray;
-    height: 30vh;
-    width: 80vw;
-    border-radius: 2rem;
-    padding: 1rem;
-}
-
-div.checkins {
-    background: gray;
-    height: 30vh;
+    height: 75vh;
     width: 80vw;
     border-radius: 2rem;
     padding: 1rem;
