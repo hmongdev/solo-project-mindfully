@@ -3,6 +3,7 @@ import Navbar from '../Navbar/Navbar';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { useHistory } from 'react-router-dom';
+import '../Feeling/Feeling.css';
 
 export default function Gratitude() {
     const history = useHistory();
@@ -18,7 +19,8 @@ export default function Gratitude() {
     return (
         <div>
             <p className="view-title">What are you grateful for?</p>
-            <div className="button-container">
+            <div className="main-container"></div>
+            <div className="nav-container">
                 <button onClick={handleBack}>
                     <KeyboardArrowLeftIcon style={{ fontSize: 60 }} />
                     Back
