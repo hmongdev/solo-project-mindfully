@@ -19,15 +19,28 @@ export default function Gratitude() {
     return (
         <div>
             <p className="view-title">What are you grateful for?</p>
-            <div className="main-container"></div>
+            <form className="main-container">
+                <input
+                    className="gratitude"
+                    placeholder="Someone helped me by..."
+                ></input>
+                <input
+                    className="gratitude"
+                    placeholder="I'm really glad that..."
+                ></input>
+                <input
+                    className="gratitude"
+                    placeholder="I laughed at..."
+                ></input>
+                <button className="submit" onClick={handleSubmit}>
+                    <CheckCircleIcon style={{ fontSize: 60 }} />
+                    Submit
+                </button>
+            </form>
             <div className="nav-container">
                 <button onClick={handleBack}>
                     <KeyboardArrowLeftIcon style={{ fontSize: 60 }} />
                     Back
-                </button>
-                <button onClick={handleSubmit}>
-                    <CheckCircleIcon style={{ fontSize: 60 }} />
-                    Submit
                 </button>
             </div>
             <Navbar />

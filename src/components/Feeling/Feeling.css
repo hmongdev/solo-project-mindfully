@@ -18,6 +18,15 @@ button.feeling {
     box-shadow: 0.01px 0.01px 20px rgb(5, 48, 74);
 }
 
+button.submit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 3vh;
+}
+
 p {
     display: flex;
     justify-content: center;
@@ -31,10 +40,23 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 10vw;
+    margin: 4vh 20vw;
 }
 
 .nav-container {
     display: flex;
     justify-content: center;
+}
+
+textarea {
+    font-family: 'ABeeZee', sans-serif;
+    text-align: center;
+    border-radius: 5%;
+    width: 90vw;
+    height: 50vh;
+    font-size: 2rem;
+}
+
+.gratitude {
+    font-size: 2rem;
 }
