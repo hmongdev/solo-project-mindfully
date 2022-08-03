@@ -1,9 +1,14 @@
 .button-container button {
-    display: inline-block;
-    margin: 0 15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20vw;
 }
 
 .button-container {
+    display: flex;
+    justify-content: center;
     position: relative;
     top: 65vh;
 }
