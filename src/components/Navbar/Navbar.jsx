@@ -6,6 +6,7 @@ import '../Navbar/Navbar.css';
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 import PsychologyIcon from '@mui/icons-material/Psychology';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import HomeIcon from '@mui/icons-material/Home';
 
 export default function Navbar() {
     const history = useHistory();
@@ -13,7 +14,13 @@ export default function Navbar() {
     return (
         <div className="navbar">
             <button
-                className="practice"
+                onClick={() => {
+                    history.push('/dashboard');
+                }}
+            >
+                <HomeIcon style={{ fontSize: 60 }} />
+            </button>
+            <button
                 onClick={() => {
                     history.push('/practices');
                 }}
@@ -21,7 +28,6 @@ export default function Navbar() {
                 <PsychologyIcon style={{ fontSize: 60 }} />
             </button>
             <button
-                className="profile"
                 onClick={() => {
                     history.push('/profile');
                 }}
@@ -29,7 +35,6 @@ export default function Navbar() {
                 <AccountCircleIcon style={{ fontSize: 60 }} />
             </button>
             <button
-                className="checkins"
                 onClick={() => {
                     history.push('/checkins/feeling');
                 }}
