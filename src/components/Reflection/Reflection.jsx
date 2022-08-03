@@ -18,7 +18,14 @@ export default function Reflection() {
     return (
         <div>
             <p className="view-title">How was your day?</p>
-            <div className="main-container"></div>
+            <div className="main-container">
+                <p className="view-title">Today's Date</p>
+                <textarea
+                    className="reflection"
+                    type="text"
+                    placeholder="What happened? What did you do today?"
+                ></textarea>
+            </div>
             <div className="nav-container">
                 <button onClick={handleBack}>
                     <KeyboardArrowLeftIcon style={{ fontSize: 60 }} />
