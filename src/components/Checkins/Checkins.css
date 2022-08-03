@@ -1,0 +1,9 @@
+.button-container button {
+    display: inline-block;
+    margin: 0 15vw;
+}
+
+.button-container {
+    position: relative;
+    top: 65vh;
+}
