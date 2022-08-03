@@ -18,6 +18,15 @@ button.feeling {
     box-shadow: 0.01px 0.01px 20px rgb(5, 48, 74);
 }
 
+button.submit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 3vh;
+}
+
 p {
     display: flex;
     justify-content: center;
@@ -46,5 +55,8 @@ textarea {
     width: 90vw;
     height: 50vh;
     font-size: 2rem;
-    word-wrap: break-word;
+}
+
+.gratitude {
+    font-size: 2rem;
 }
