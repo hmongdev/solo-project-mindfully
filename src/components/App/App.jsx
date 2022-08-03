@@ -54,7 +54,6 @@ function App() {
                     >
                         <Practices />
                     </ProtectedRoute>
-                    //profile
                     <ProtectedRoute exact path="/profile">
                         <Profile />
                     </ProtectedRoute>
