@@ -27,7 +27,7 @@ export default function Profile() {
                     </li>
                     <hr></hr>
                     <li>
-                        <button>
+                        <button className="btn-delete">
                             <span>Delete Account</span>
                         </button>
                     </li>
