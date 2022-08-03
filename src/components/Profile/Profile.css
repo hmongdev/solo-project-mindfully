@@ -1,0 +1,35 @@
+li {
+    list-style-type: none;
+    text-align: center;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+hr {
+    width: 80vw;
+    border: 1px solid #c2c2c2;
+}
+
+span {
+    font-size: 2rem;
+}
+
+ul {
+    padding: 0;
+}
+
+h1 {
+    margin: 5rem;
+}
+
+.greeting {
+    font-size: 3rem;
+    color: white;
+}
+
+.settings-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 30vh;
+}
