@@ -8,7 +8,10 @@ import CheckinsList from '../CheckinsList/CheckinsList';
 export default function Dashboard() {
     return (
         <div>
-            <CheckinsList />
+            {/* <CheckinsList /> */}
+            <table>
+                <tr></tr>
+            </table>
             <Navbar />
         </div>
     );
