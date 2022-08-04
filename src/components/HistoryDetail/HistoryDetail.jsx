@@ -17,7 +17,7 @@ function HistoryDetail(props) {
 
     return (
         <tr>
-            <td>{props.detail.emoji}</td>
+            <td>{props.detail.emoji_code}</td>
             <td>{props.detail.reflection}</td>
             {/* <td>
                 <button onClick={handleEditClick}>Edit!</button>

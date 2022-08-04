@@ -8,7 +8,6 @@ import HistoryDetail from '../HistoryDetail/HistoryDetail';
 export default function Dashboard() {
     const historyList = useSelector((store) => store.historyList);
     const dispatch = useDispatch();
-    console.log(`What are we getting back from DB:`, historyList);
 
     useEffect(() => {
         dispatch({
