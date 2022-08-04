@@ -18,18 +18,16 @@ export default function Dashboard() {
     return (
         <div>
             <p className="view-title">Dashboard</p>
-            <table>
+            <table className="container">
                 <thead>
-                    <tr>
+                    {/* <tr>
                         <th>Emoji</th>
                         <th>Reflection</th>
-                    </tr>
+                    </tr> */}
                 </thead>
                 <tbody>
-                    {historyList.map((detail) => {
-                        return (
-                            <HistoryDetail key={detail.id} detail={detail} />
-                        );
+                    {historyList.map((detail, i) => {
+                        return <HistoryDetail key={i} detail={detail} />;
                     })}
                 </tbody>
             </table>
