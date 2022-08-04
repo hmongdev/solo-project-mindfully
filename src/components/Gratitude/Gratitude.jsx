@@ -32,7 +32,7 @@ export default function Gratitude() {
                     className="gratitude"
                     placeholder="I laughed at..."
                 ></input>
-                <button className="submit" onClick={handleSubmit}>
+                <button className="" onClick={handleSubmit}>
                     <CheckCircleIcon style={{ fontSize: 60 }} />
                     Submit
                 </button>
