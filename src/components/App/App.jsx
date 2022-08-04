@@ -66,33 +66,24 @@ function App() {
                     <ProtectedRoute exact path="/gratitude">
                         <Gratitude />
                     </ProtectedRoute>
+                    //if user is logged in, redirect to dashboard
                     <Route exact path="/login">
-                        {user.id ? (
-                            // If the user is already logged in,
-                            // redirect to the /user page
-                            <Redirect to="/dashboard" />
-                        ) : (
-                            // Otherwise, show the login page
-                            <LoginPage />
-                        )}
+                        {user.id ? <Redirect to="/dashboard" /> : <LoginPage />}
                     </Route>
                     <Route exact path="/registration">
                         {user.id ? (
-                            // If the user is already logged in,
-                            // redirect them to the /user page
                             <Redirect to="/dashboard" />
                         ) : (
-                            // Otherwise, show the registration page
                             <RegisterPage />
                         )}
                     </Route>
                     <Route exact path="/home">
                         {user.id ? (
                             // If the user is already logged in,
-                            // redirect them to the /user page
+                            // redirect them to the dashboard
                             <Redirect to="/dashboard" />
                         ) : (
-                            // Otherwise, show the Landing page
+                            // Otherwise, show the login page
                             <LoginPage />
                         )}
                     </Route>

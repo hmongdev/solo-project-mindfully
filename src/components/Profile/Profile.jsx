@@ -7,6 +7,14 @@ export default function Profile() {
     const user = useSelector((store) => store.user);
     const dispatch = useDispatch();
 
+    const handleDeleteAccount = () => {
+        // alert('Are you sure you want to delete your account?');
+        //This is where I left off on feature/deleteAccount
+        dispatch({
+            type: 'DELETE_ACCOUNT',
+        });
+    };
+
     return (
         <>
             <p className="view-title">Profile</p>
@@ -27,7 +35,10 @@ export default function Profile() {
                     </li>
                     <hr></hr>
                     <li>
-                        <button>
+                        <button
+                            className="btn-delete"
+                            onClick={handleDeleteAccount}
+                        >
                             <span>Delete Account</span>
                         </button>
                     </li>
