@@ -31,3 +31,7 @@
 .navLink:hover {
     background-color: #008183;
 }
+
+p.subtitle {
+    font-size: 5rem;
+}

@@ -4,7 +4,9 @@ const pool = require('../modules/pool');
 
 //GET
 router.get('/', (req, res) => {
-    pool.query('SELECT * from "history";')
+    const queryText = `select * from "history"
+    join feeling on feeling.id = history.feeling_id;`;
+    pool.query(queryText)
         .then((result) => {
             res.send(result.rows);
         })
