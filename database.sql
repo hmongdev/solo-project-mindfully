@@ -24,8 +24,8 @@ create table "history" (
 	"id" serial primary key,
 	"user_id" int references "user",
 	"date_created" date not null,
-	"reflection" text not null,
 	"feeling_id" int references "feeling",
+	"reflection" text not null,
 	"gratitude1" varchar(140),
 	"gratitude2" varchar(140),
 	"gratitude3" varchar(140)
@@ -46,3 +46,6 @@ values
 ('😖', 'Stressed'),
 ('😞', 'Sad')
 ;
+
+insert into "history" ("user_id", "date_created", "feeling_id", "reflection", "gratitude1", "gratitude2", "gratitude3")
+values (1, '1997-08-24', 1, 'test', 'glad for today!', 'a stranger said hello!', 'found my keys!');
