@@ -21,20 +21,16 @@ figcaption {
 }
 
 table,
-thead,
 tbody {
     margin: auto;
 }
 
-tr,
-th {
+tr {
     text-align: left;
     font-size: 5vw;
-    width: 50vw;
 }
 
-td,
-th {
+td {
     padding: 1rem;
 }
 
