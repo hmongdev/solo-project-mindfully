@@ -19,3 +19,28 @@ blockquote {
 figcaption {
     font-size: medium;
 }
+
+table,
+tbody {
+    margin: auto;
+}
+
+tr {
+    text-align: left;
+    font-size: 5vw;
+}
+
+td {
+    padding: 1rem;
+}
+
+td.emoji {
+    font-size: 5rem;
+    width: 20%;
+}
+
+td.reflection {
+    text-align: left;
+    max-width: 10vw;
+    text-overflow: ellipsis;
+}
