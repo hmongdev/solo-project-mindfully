@@ -3,7 +3,6 @@ import axios from 'axios';
 
 function* postForm(action) {
     try {
-        console.log(`what is action:`, action);
         const response = yield axios.post('/api/history', action.payload);
         yield put({
             type: 'FETCH_HISTORY',

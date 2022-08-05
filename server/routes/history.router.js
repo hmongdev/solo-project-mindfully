@@ -5,10 +5,11 @@ const pool = require('../modules/pool');
 
 //GET
 router.get('/', (req, res) => {
-    const user = useSelector((store) => store.user);
+    // const user = useSelector((store) => store.user);
+    console.log(`What is going on here?`);
     const queryText = `select * from "history"
     where user_id = $1;`;
-    pool.query(queryText, [user.id])
+    pool.query(queryText)
         .then((result) => {
             res.send(result.rows);
         })
@@ -21,17 +22,17 @@ router.get('/', (req, res) => {
 //POST
 router.post('/', (req, res) => {
     //const
-    const user = useSelector((store) => store.user);
+    const id = req.user.id;
     const b = req.body;
-    const sqlQuery = `insert into "history" ("user_id", feeling", "reflection", "gratitude1", "gratitude2", "gratitude3")
-    VALUES ($1, $2, $3, $4, $5, $6);
+    //1. query MAKES THE FORM
+    const sqlQuery = `insert into "history" ("user_id", "feeling", "reflection", "gratitude1", "gratitude2", "gratitude3")
+    VALUES ($1, $2, $3, $4, $5, $6)
+    returning "id";
     `;
-
-    console.log(`user.id:`, user.id);
 
     //pool.query
     pool.query(sqlQuery, [
-        user.id,
+        id,
         b.feeling,
         b.reflection,
         b.gratitude1,

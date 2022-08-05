@@ -19,7 +19,7 @@ export default function Navbar() {
                 }}
             >
                 <HomeIcon style={{ fontSize: 60 }} />
-                Home
+                Dashboard
             </button>
             <button
                 onClick={() => {
