@@ -18,6 +18,10 @@ button.feeling {
     box-shadow: 0.01px 0.01px 20px rgb(5, 48, 74);
 }
 
+button.feeling:focus {
+    background: linear-gradient(45deg, #58b5e3, pink);
+}
+
 button.submit {
     display: flex;
     flex-direction: column;
