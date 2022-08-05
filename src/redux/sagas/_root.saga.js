@@ -2,6 +2,7 @@ import { all } from 'redux-saga/effects';
 import loginSaga from './login.saga';
 import registrationSaga from './registration.saga';
 import userSaga from './user.saga';
+import historySaga from './history.saga';
 import formSaga from './form.saga';
 
 // rootSaga is the primary saga.
@@ -16,6 +17,7 @@ export default function* rootSaga() {
         userSaga(),
         loginSaga(), // login saga is now registered
         formSaga(),
+        historySaga(),
         registrationSaga(),
     ]);
 }

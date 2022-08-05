@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import errors from './errors.reducer';
 import user from './user.reducer';
-import historyList from './history.reducer';
+import historyList from './historyList.reducer';
 import feeling from './feeling.reducer';
 import reflection from './reflection.reducer';
 import gratitude from './gratitude.reducer';

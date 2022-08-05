@@ -4,9 +4,9 @@ const pool = require('../modules/pool');
 
 //GET
 router.get('/', (req, res) => {
-    const id = req.user.id;
-    const queryText = `select * from "history where user_id = $1";`;
-    pool.query(queryText, [id])
+    // const id = req.user.id;
+    const queryText = `select * from history;`;
+    pool.query(queryText)
         .then((result) => {
             res.send(result.rows);
         })
@@ -25,7 +25,6 @@ router.post('/', (req, res) => {
     const sqlQuery = `insert into "history" ("user_id", "feeling", "reflection", "gratitude1", "gratitude2", "gratitude3")
     VALUES ($1, $2, $3, $4, $5, $6);
     `;
-
     //pool.query
     pool.query(sqlQuery, [
         id,
@@ -40,7 +39,7 @@ router.post('/', (req, res) => {
             res.sendStatus(201);
         })
         .catch((err) => {
-            console.log(`ERR in POST history.router.jsx`, err);
+            console.log(`POST ERROR in history.router.jsx`, err);
             res.sendStatus(500);
         });
 }); // END GET Route

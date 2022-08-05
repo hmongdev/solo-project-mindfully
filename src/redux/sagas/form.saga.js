@@ -6,6 +6,7 @@ function* postForm(action) {
         const response = yield axios.post('/api/history', action.payload);
         yield put({
             type: 'FETCH_HISTORY',
+            payload: response.data,
         });
     } catch (err) {
         console.log(err);
