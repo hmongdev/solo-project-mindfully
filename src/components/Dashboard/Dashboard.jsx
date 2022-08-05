@@ -20,8 +20,10 @@ export default function Dashboard() {
             <p className="view-title">Dashboard</p>
             <table className="main-container">
                 <tbody>
-                    {historyList.map((detail, i) => {
-                        return <HistoryDetail key={i} detail={detail} />;
+                    {historyList.map((detail) => {
+                        return (
+                            <HistoryDetail key={detail.id} detail={detail} />
+                        );
                     })}
                 </tbody>
             </table>
