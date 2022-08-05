@@ -1,15 +1,12 @@
 const express = require('express');
-const { useSelector } = require('react-redux');
 const router = express.Router();
 const pool = require('../modules/pool');
 
 //GET
 router.get('/', (req, res) => {
-    // const user = useSelector((store) => store.user);
-    console.log(`What is going on here?`);
-    const queryText = `select * from "history"
-    where user_id = $1;`;
-    pool.query(queryText)
+    const id = req.user.id;
+    const queryText = `select * from "history where user_id = $1";`;
+    pool.query(queryText, [id])
         .then((result) => {
             res.send(result.rows);
         })
@@ -26,8 +23,7 @@ router.post('/', (req, res) => {
     const b = req.body;
     //1. query MAKES THE FORM
     const sqlQuery = `insert into "history" ("user_id", "feeling", "reflection", "gratitude1", "gratitude2", "gratitude3")
-    VALUES ($1, $2, $3, $4, $5, $6)
-    returning "id";
+    VALUES ($1, $2, $3, $4, $5, $6);
     `;
 
     //pool.query
