@@ -11,7 +11,10 @@ export default function Feeling() {
     const dispatch = useDispatch();
     const [feeling, setFeeling] = useState('');
 
-    const handleCancelCheckins = () => {
+    const handleCancel = () => {
+        dispatch({
+            type: 'CLEAR_ALL',
+        });
         history.push('/dashboard');
     };
 
@@ -127,7 +130,7 @@ export default function Feeling() {
                 </ul>
             </div>
             <div className="nav-container">
-                <button onClick={handleCancelCheckins}>
+                <button onClick={handleCancel}>
                     <CancelIcon style={{ fontSize: 60 }} />
                     Cancel
                 </button>

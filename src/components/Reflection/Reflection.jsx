@@ -18,7 +18,7 @@ export default function Reflection() {
     const handleNext = (event) => {
         event.preventDefault();
         dispatch({
-            type: 'ADD_REFLECTION',
+            type: 'SET_REFLECTION',
             payload: reflection,
         });
         history.push('/gratitude');

@@ -3,8 +3,8 @@ import errors from './errors.reducer';
 import user from './user.reducer';
 import historyList from './history.reducer';
 import feeling from './feeling.reducer';
-import gratitude from './gratitude.reducer';
 import reflection from './reflection.reducer';
+import gratitude from './gratitude.reducer';
 
 // rootReducer is the primary reducer for our entire project
 // It bundles up all of the other reducers so our project can use them.
@@ -17,8 +17,8 @@ const rootReducer = combineReducers({
     user, // will have an id and username if someone is logged in
     historyList,
     feeling,
-    gratitude,
     reflection,
+    gratitude,
 });
 
 export default rootReducer;
