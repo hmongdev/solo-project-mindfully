@@ -6,7 +6,7 @@ function HistoryDetail(props) {
     const history = useHistory();
 
     return (
-        <tr>
+        <tr key={props.detail.i}>
             <td className="emoji">{props.detail.feeling}</td>
             <td className="reflection">{props.detail.reflection}</td>
         </tr>
