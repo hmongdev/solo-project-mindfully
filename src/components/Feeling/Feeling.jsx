@@ -39,7 +39,7 @@ export default function Feeling() {
                         🙂<p>Content</p>
                     </button>
                     <button className="feeling">
-                        🥱<p>Tired</p>
+                        😮‍💨<p>Tired</p>
                     </button>
                 </ul>
                 <ul>
@@ -47,7 +47,7 @@ export default function Feeling() {
                         🤔<p>Unsure</p>
                     </button>
                     <button className="feeling">
-                        😑<p>Bored</p>
+                        🥱<p>Bored</p>
                     </button>
                     <button className="feeling">
                         😰<p>Anxious</p>
