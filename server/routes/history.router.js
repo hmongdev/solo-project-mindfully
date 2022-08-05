@@ -35,7 +35,6 @@ router.post('/', (req, res) => {
         b.gratitude3,
     ])
         .then((result) => {
-            console.log(`POST Success!`, result);
             res.sendStatus(201);
         })
         .catch((err) => {
