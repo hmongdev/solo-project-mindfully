@@ -1,9 +1,4 @@
-import { useDispatch } from 'react-redux';
-import { useHistory } from 'react-router-dom';
-
-function HistoryDetail(props) {
-    const dispatch = useDispatch();
-
+export default function HistoryDetail(props) {
     return (
         <tr>
             <td className="emoji">{props.detail.feeling}</td>
@@ -11,5 +6,3 @@ function HistoryDetail(props) {
         </tr>
     );
 }
-
-export default HistoryDetail;
