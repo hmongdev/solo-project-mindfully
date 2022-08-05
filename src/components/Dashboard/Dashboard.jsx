@@ -18,7 +18,7 @@ export default function Dashboard() {
     return (
         <div>
             <p className="view-title">Dashboard</p>
-            <table className="container">
+            <table className="main-container">
                 <tbody>
                     {historyList.map((detail, i) => {
                         return <HistoryDetail key={i} detail={detail} />;

@@ -65,15 +65,19 @@ export default function Gratitude() {
                     placeholder="I laughed at..."
                     onChange={(event) => setGratitude3(event.target.value)}
                 ></input>
-                <button className="" onClick={handleSubmit}>
-                    <CheckCircleIcon style={{ fontSize: 60 }} />
-                    Submit
-                </button>
             </form>
             <div className="nav-container">
                 <button onClick={handleBack}>
-                    <KeyboardArrowLeftIcon style={{ fontSize: 60 }} />
+                    <KeyboardArrowLeftIcon
+                        style={{ fontSize: 60, color: 'yellow' }}
+                    />
                     Back
+                </button>
+                <button onClick={handleSubmit}>
+                    <CheckCircleIcon
+                        style={{ fontSize: 60, color: 'limegreen' }}
+                    />
+                    Submit
                 </button>
             </div>
             <Navbar />

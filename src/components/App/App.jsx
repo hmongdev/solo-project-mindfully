@@ -23,7 +23,6 @@ import './App.css';
 
 function App() {
     const dispatch = useDispatch();
-
     const user = useSelector((store) => store.user);
 
     useEffect(() => {

@@ -28,7 +28,6 @@ export default function Feeling() {
     };
 
     const handleFeeling = (event) => {
-        console.log(event.target.value);
         setFeeling(event.target.value);
     };
 
@@ -131,11 +130,13 @@ export default function Feeling() {
             </div>
             <div className="nav-container">
                 <button onClick={handleCancel}>
-                    <CancelIcon style={{ fontSize: 60 }} />
+                    <CancelIcon style={{ fontSize: 60, color: 'darkred' }} />
                     Cancel
                 </button>
                 <button onClick={handleNext}>
-                    <KeyboardArrowRightIcon style={{ fontSize: 60 }} />
+                    <KeyboardArrowRightIcon
+                        style={{ fontSize: 60, color: 'limegreen' }}
+                    />
                     Next
                 </button>
             </div>

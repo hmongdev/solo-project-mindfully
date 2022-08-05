@@ -11,6 +11,12 @@ export default function Reflection() {
     const dispatch = useDispatch();
     const [reflection, setReflection] = useState('');
 
+    //date
+    const current = new Date();
+    const date = `${
+        current.getMonth() + 1
+    }/${current.getDate()}/${current.getFullYear()}`;
+
     const handleBack = () => {
         history.push('/feeling');
     };
@@ -28,7 +34,7 @@ export default function Reflection() {
         <div>
             <p className="view-title">How was your day?</p>
             <div className="main-container">
-                <p className="view-title">Today's Date</p>
+                <p className="view-title">{date}</p>
                 <form onSubmit={handleNext}>
                     <textarea
                         className="reflection"
@@ -40,11 +46,15 @@ export default function Reflection() {
             </div>
             <div className="nav-container">
                 <button onClick={handleBack}>
-                    <KeyboardArrowLeftIcon style={{ fontSize: 60 }} />
+                    <KeyboardArrowLeftIcon
+                        style={{ fontSize: 60, color: 'yellow' }}
+                    />
                     Back
                 </button>
                 <button onClick={handleNext}>
-                    <KeyboardArrowRightIcon style={{ fontSize: 60 }} />
+                    <KeyboardArrowRightIcon
+                        style={{ fontSize: 60, color: 'limegreen' }}
+                    />
                     Next
                 </button>
             </div>

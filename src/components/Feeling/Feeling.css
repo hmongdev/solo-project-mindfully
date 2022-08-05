@@ -1,11 +1,13 @@
 .main-container {
+    background: rgba(red, green, blue, 0.2);
     display: flex;
-    height: 60vh;
+    height: 50vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 0.5rem;
-    margin: auto;
+    margin-top: 5rem;
+    /* margin: auto; */
 }
 
 button.feeling {
@@ -18,13 +20,8 @@ button.feeling {
     box-shadow: 0.01px 0.01px 20px rgb(5, 48, 74);
 }
 
-button.submit {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 3vh;
+button.feeling:focus {
+    background: linear-gradient(70deg, transparent, pink);
 }
 
 p {
@@ -40,21 +37,35 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 4vh 20vw;
+    margin: 10vh 20vw;
+}
+
+button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-container {
     display: flex;
     justify-content: center;
+    height: fit-content;
 }
 
 textarea {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
     font-family: 'ABeeZee', sans-serif;
     text-align: center;
     border-radius: 5%;
     width: 90vw;
     height: 50vh;
     font-size: 2rem;
+}
+
+textarea:focus {
+    outline: none;
 }
 
 .gratitude {
