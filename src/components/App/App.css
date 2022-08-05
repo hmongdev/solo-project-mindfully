@@ -13,7 +13,9 @@ body,
     overflow: hidden;
 }
 
-div {
+div,
+li,
+button {
     margin: auto;
     text-align: center;
 }
@@ -36,13 +38,12 @@ body {
 }
 
 .view-title {
+    font-family: 'Square Peg', cursive;
     text-align: center;
-    font-size: 3rem;
+    font-size: 5rem;
     width: fit-content;
-    font-family: 'Open Sans', sans-serif;
     color: #fff;
-    padding: 2rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 
 p,
@@ -141,6 +142,7 @@ input.btn {
 
 ::-webkit-input-placeholder {
     text-align: center;
+    color: black;
 }
 
 center {
