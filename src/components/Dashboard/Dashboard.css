@@ -41,6 +41,5 @@ td.emoji {
 
 td.reflection {
     text-align: left;
-    max-width: 10vw;
     text-overflow: ellipsis;
 }

@@ -17,7 +17,7 @@ function HistoryDetail(props) {
 
     return (
         <tr>
-            <td className="emoji">{props.detail.emoji_code}</td>
+            <td className="emoji">{props.detail.feeling}</td>
             <td className="reflection">{props.detail.reflection}</td>
         </tr>
     );

@@ -1,17 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from '../Navbar/Navbar';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import { useHistory } from 'react-router-dom';
 import '../Feeling/Feeling.css';
+import { useDispatch } from 'react-redux';
 
 export default function Reflection() {
     const history = useHistory();
+    const dispatch = useDispatch();
+    const [reflection, setReflection] = useState('');
+
     const handleBack = () => {
         history.push('/feeling');
     };
 
-    const handleNext = () => {
+    const handleNext = (event) => {
+        event.preventDefault();
+        dispatch({
+            type: 'SET_REFLECTION',
+            payload: reflection,
+        });
         history.push('/gratitude');
     };
 
@@ -20,11 +29,14 @@ export default function Reflection() {
             <p className="view-title">How was your day?</p>
             <div className="main-container">
                 <p className="view-title">Today's Date</p>
-                <textarea
-                    className="reflection"
-                    type="text"
-                    placeholder="What happened? What did you do today?"
-                ></textarea>
+                <form onSubmit={handleNext}>
+                    <textarea
+                        className="reflection"
+                        type="text"
+                        placeholder="What happened? What did you do today?"
+                        onChange={(event) => setReflection(event.target.value)}
+                    />
+                </form>
             </div>
             <div className="nav-container">
                 <button onClick={handleBack}>
