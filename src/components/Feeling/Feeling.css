@@ -21,7 +21,16 @@ button.feeling {
 }
 
 button.feeling:focus {
-    background: linear-gradient(70deg, transparent, pink);
+    background: linear-gradient(45deg, #58b5e3, pink);
+}
+
+button.submit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 3vh;
 }
 
 p {
