@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
-import Navbar from '../Navbar/Navbar';
 import './HistoryDetail.css';
 import NavbarDetail from '../NavbarDetail/NavbarDetail';
 
@@ -15,7 +14,7 @@ export default function HistoryDetail() {
             type: 'FETCH_DETAIL',
             payload: id,
         });
-    }, [dispatch]);
+    }, []);
 
     return (
         <>
@@ -35,7 +34,6 @@ export default function HistoryDetail() {
                 </ol>
             </div>
             <NavbarDetail />
-            <Navbar />
         </>
     );
 }
