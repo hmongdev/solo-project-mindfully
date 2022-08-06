@@ -14,7 +14,7 @@ export default function Dashboard() {
         dispatch({
             type: 'FETCH_HISTORY',
         });
-    }, [dispatch]);
+    }, []);
 
     const handleHistoryDetail = (id) => {
         dispatch({
@@ -32,7 +32,6 @@ export default function Dashboard() {
                     {historyList.map((detail) => {
                         return (
                             <>
-                                {/* <tr className="date">{detail.date}</tr> */}
                                 <tr
                                     key={detail.id}
                                     onClick={() =>

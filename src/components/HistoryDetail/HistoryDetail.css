@@ -1,0 +1,32 @@
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+}
+
+li.emoji,
+li.reflection,
+li.gratitude {
+    margin: 0;
+    padding: 1rem 0;
+}
+
+li.emoji {
+    font-size: 4rem;
+}
+li.reflection,
+li.gratitude {
+    font-size: 1.5rem;
+    color: rgb(215, 215, 215);
+}
+
+.detail-heading {
+    font-size: 2rem;
+    margin: 1rem;
+    padding: 1rem;
+}

@@ -2,7 +2,6 @@ import { takeEvery, put } from 'redux-saga/effects';
 import axios from 'axios';
 
 function* getDetail(action) {
-    console.log(`what is action.payload:`, action.payload);
     try {
         const response = yield axios.get(`/api/detail/${action.payload}`);
         yield put({
