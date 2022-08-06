@@ -19,7 +19,7 @@ export default function HistoryDetail() {
 
     return (
         <>
-            <p className="view-title">Date</p>
+            <p className="view-title">{detail[0].date_created}</p>
             <div className="main-container">
                 <h1 className="detail-heading">I felt...</h1>
                 <li className="emoji">{detail[0]?.feeling}</li>
