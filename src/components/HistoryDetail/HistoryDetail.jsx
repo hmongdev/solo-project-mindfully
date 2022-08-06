@@ -13,7 +13,7 @@ export default function HistoryDetail() {
             type: 'FETCH_DETAIL',
             payload: id,
         });
-    }, []);
+    }, [dispatch]);
 
     return (
         <>

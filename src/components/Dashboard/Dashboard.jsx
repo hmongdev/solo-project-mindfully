@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import './Dashboard.css';
 import '../Navbar/Navbar.css';
+import '../Dashboard/Dashboard.css';
 import Navbar from '../Navbar/Navbar';
 import { useHistory } from 'react-router-dom';
 
@@ -14,7 +14,7 @@ export default function Dashboard() {
         dispatch({
             type: 'FETCH_HISTORY',
         });
-    }, []);
+    }, [dispatch]);
 
     const handleHistoryDetail = (id) => {
         dispatch({
@@ -31,15 +31,20 @@ export default function Dashboard() {
                 <tbody>
                     {historyList.map((detail) => {
                         return (
-                            <tr
-                                key={detail.id}
-                                onClick={() => handleHistoryDetail(detail.id)}
-                            >
-                                <td className="emoji">{detail.feeling}</td>
-                                <td className="reflection">
-                                    {detail.reflection}
-                                </td>
-                            </tr>
+                            <>
+                                {/* <tr className="date">{detail.date}</tr> */}
+                                <tr
+                                    key={detail.id}
+                                    onClick={() =>
+                                        handleHistoryDetail(detail.id)
+                                    }
+                                >
+                                    <td className="emoji">{detail.feeling}</td>
+                                    <td className="reflection">
+                                        {detail.reflection}
+                                    </td>
+                                </tr>
+                            </>
                         );
                     })}
                 </tbody>

@@ -12,6 +12,10 @@ figcaption {
     padding: 1rem;
 }
 
+tr.date {
+    text-align: center;
+}
+
 blockquote {
     font-size: large;
 }
