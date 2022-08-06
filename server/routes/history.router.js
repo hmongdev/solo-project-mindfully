@@ -5,13 +5,29 @@ const pool = require('../modules/pool');
 //GET
 router.get('/', (req, res) => {
     const id = req.user.id;
-    const queryText = `select * from history where user_id = ${id};`;
-    pool.query(queryText)
+    const query = `select * from history where user_id = ${id};`;
+    pool.query(query)
         .then((result) => {
             res.send(result.rows);
         })
         .catch((error) => {
             console.log('GET error in history.router.js', error);
+            res.sendStatus(500);
+        });
+});
+
+//PUT
+router.put('/:id', (req, res) => {
+    // Update my profile name
+    const user = req.body;
+    const id = req.params.id;
+    const query = `update "user" set "name" = $1 where id = 2;`;
+    pool.query(query, [user.name, id])
+        .then((result) => {
+            res.sendStatus(200);
+        })
+        .catch((error) => {
+            console.log(`Error making database query ${query}`, error);
             res.sendStatus(500);
         });
 });
