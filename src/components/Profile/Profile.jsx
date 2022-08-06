@@ -22,6 +22,11 @@ export default function Profile() {
         history.push('/');
     };
 
+    const handleEditName = () => {
+        dispatch({ type: 'SET_EDIT_NAME' });
+        history.push('/profile/edit');
+    };
+
     return (
         <>
             <p className="view-title">Profile</p>
@@ -30,7 +35,7 @@ export default function Profile() {
                 <ul>
                     <h1 className="greeting">Hello, {user.name}</h1>
                     <li>
-                        <button>
+                        <button onClick={handleEditName}>
                             <span>Edit Name</span>
                         </button>
                     </li>

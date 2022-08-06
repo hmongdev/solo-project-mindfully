@@ -65,6 +65,11 @@ function App() {
                         path="/detail/:id"
                         component={HistoryDetail}
                     />
+                    <ProtectedRoute
+                        exact
+                        path="/profile/edit"
+                        component={Profile}
+                    />
                     {/* ------------------------------Routes---------------------------------- */}
                     <Route exact path="/login">
                         {user.id ? <Redirect to="/dashboard" /> : <LoginPage />}

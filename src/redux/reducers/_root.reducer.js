@@ -6,6 +6,7 @@ import feeling from './feeling.reducer';
 import reflection from './reflection.reducer';
 import gratitude from './gratitude.reducer';
 import detail from './detail.reducer';
+import editName from './editName.reducer';
 
 // rootReducer is the primary reducer for our entire project
 // It bundles up all of the other reducers so our project can use them.
@@ -21,6 +22,7 @@ const rootReducer = combineReducers({
     feeling,
     reflection,
     gratitude,
+    editName,
 });
 
 export default rootReducer;
