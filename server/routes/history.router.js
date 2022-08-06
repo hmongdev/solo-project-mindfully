@@ -4,8 +4,8 @@ const pool = require('../modules/pool');
 
 //GET
 router.get('/', (req, res) => {
-    // const id = req.user.id;
-    const queryText = `select * from history;`;
+    const id = req.user.id;
+    const queryText = `select * from history where user_id = ${id};`;
     pool.query(queryText)
         .then((result) => {
             res.send(result.rows);

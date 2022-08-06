@@ -5,6 +5,7 @@ import historyList from './historyList.reducer';
 import feeling from './feeling.reducer';
 import reflection from './reflection.reducer';
 import gratitude from './gratitude.reducer';
+import detail from './detail.reducer';
 
 // rootReducer is the primary reducer for our entire project
 // It bundles up all of the other reducers so our project can use them.
@@ -15,6 +16,7 @@ import gratitude from './gratitude.reducer';
 const rootReducer = combineReducers({
     errors, // contains registrationMessage and loginMessage
     user, // will have an id and username if someone is logged in
+    detail,
     historyList,
     feeling,
     reflection,

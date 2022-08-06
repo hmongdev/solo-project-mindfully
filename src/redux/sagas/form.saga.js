@@ -13,8 +13,6 @@ function* postForm(action) {
     }
 }
 
-function* formSaga() {
+export default function* formSaga() {
     yield takeEvery('POST_FORM', postForm);
 }
-
-export default formSaga;

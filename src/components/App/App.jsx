@@ -18,6 +18,7 @@ import Dashboard from '../Dashboard/Dashboard';
 import Practices from '../Practices/Practices';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
+import HistoryDetail from '../HistoryDetail/HistoryDetail';
 
 import './App.css';
 
@@ -65,6 +66,11 @@ function App() {
                     <ProtectedRoute exact path="/gratitude">
                         <Gratitude />
                     </ProtectedRoute>
+                    <ProtectedRoute
+                        exact
+                        path="/detail/:id"
+                        component={HistoryDetail}
+                    />
                     //if user is logged in, redirect to dashboard
                     <Route exact path="/login">
                         {user.id ? <Redirect to="/dashboard" /> : <LoginPage />}

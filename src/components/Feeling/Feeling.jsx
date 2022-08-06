@@ -130,13 +130,11 @@ export default function Feeling() {
             </div>
             <div className="nav-container">
                 <button onClick={handleCancel}>
-                    <CancelIcon style={{ fontSize: 60, color: 'darkred' }} />
+                    <CancelIcon style={{ fontSize: 60 }} />
                     Cancel
                 </button>
                 <button onClick={handleNext}>
-                    <KeyboardArrowRightIcon
-                        style={{ fontSize: 60, color: 'limegreen' }}
-                    />
+                    <KeyboardArrowRightIcon style={{ fontSize: 60 }} />
                     Next
                 </button>
             </div>
