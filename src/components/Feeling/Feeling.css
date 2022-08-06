@@ -15,11 +15,8 @@ table.main-container {
     height: 70vh;
     border: 3px solid rgba(233, 146, 227, 0.4);
     border-radius: 3rem;
+    padding-top: 5rem;
 }
-
-/* tr:focus {
-    background: linear-gradient(45deg, #58b5e300, pink);
-} */
 
 button.feeling {
     display: inline-block;
