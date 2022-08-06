@@ -5,6 +5,7 @@ html,
 body,
 #react-root {
     font-family: 'ABeeZee', sans-serif;
+    color: white;
     font-size: 62.5%;
     margin: 0;
     padding: 0;
