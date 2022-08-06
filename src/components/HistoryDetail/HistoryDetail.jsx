@@ -2,6 +2,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import Navbar from '../Navbar/Navbar';
+import './HistoryDetail.css';
+import NavbarDetail from '../NavbarDetail/NavbarDetail';
 
 export default function HistoryDetail() {
     const detail = useSelector((store) => store.detail);
@@ -18,18 +20,21 @@ export default function HistoryDetail() {
     return (
         <>
             <p className="view-title">Date</p>
-            <h1>I felt...</h1>
-            <p>{detail[0].feeling}</p>
+            <div className="main-container">
+                <h1 className="detail-heading">I felt...</h1>
+                <li className="emoji">{detail[0]?.feeling}</li>
 
-            <h1>What happened that day...</h1>
-            <p>{detail[0].reflection}</p>
+                <h1 className="detail-heading">That day...</h1>
+                <li className="reflection">{detail[0]?.reflection}</li>
 
-            <h1>I was grateful for...</h1>
-            <ol>
-                <li>{detail[0].gratitude1}</li>
-                <li>{detail[0].gratitude2}</li>
-                <li>{detail[0].gratitude3}</li>
-            </ol>
+                <h1 className="detail-heading">I was grateful for...</h1>
+                <ol>
+                    <li className="gratitude">{detail[0]?.gratitude1}</li>
+                    <li className="gratitude">{detail[0]?.gratitude2}</li>
+                    <li className="gratitude">{detail[0]?.gratitude3}</li>
+                </ol>
+            </div>
+            <NavbarDetail />
             <Navbar />
         </>
     );
