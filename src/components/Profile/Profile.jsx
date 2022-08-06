@@ -1,11 +1,13 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import './Profile.css';
 
 export default function Profile() {
     const user = useSelector((store) => store.user);
     const dispatch = useDispatch();
+    const history = useHistory();
 
     const handleDeleteAccount = () => {
         // alert('Are you sure you want to delete your account?');
@@ -13,6 +15,11 @@ export default function Profile() {
         dispatch({
             type: 'DELETE_ACCOUNT',
         });
+    };
+
+    const handleLogOut = () => {
+        dispatch({ type: 'LOGOUT' });
+        history.push('/');
     };
 
     return (
@@ -29,7 +36,7 @@ export default function Profile() {
                     </li>
                     <hr></hr>
                     <li>
-                        <button onClick={() => dispatch({ type: 'LOGOUT' })}>
+                        <button onClick={handleLogOut}>
                             <span>Log Out</span>
                         </button>
                     </li>

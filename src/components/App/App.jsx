@@ -36,22 +36,16 @@ function App() {
                 <Switch>
                     {/* Visiting localhost:3000 will redirect to localhost:3000/login */}
                     <Redirect exact from="/" to="/login" />
+
+                    {/* ------------------------------PROTECTED Routes---------------------------------- */}
                     {/* For protected routes, the view could show one of several things on the same route.
             Visiting localhost:3000/user will show the Dashboard if the user is logged in.
             If the user is not logged in, the ProtectedRoute will show the LoginPage (component).
             Even though it seems like they are different pages, the user is always on localhost:3000/user */}
-                    <ProtectedRoute
-                        // logged in shows Dashboard else shows LoginPage
-                        exact
-                        path="/dashboard"
-                    >
+                    <ProtectedRoute exact path="/dashboard">
                         <Dashboard />
                     </ProtectedRoute>
-                    <ProtectedRoute
-                        // logged in shows Practices else shows LoginPage
-                        exact
-                        path="/practices"
-                    >
+                    <ProtectedRoute exact path="/practices">
                         <Practices />
                     </ProtectedRoute>
                     <ProtectedRoute exact path="/profile">
@@ -71,30 +65,21 @@ function App() {
                         path="/detail/:id"
                         component={HistoryDetail}
                     />
-                    //if user is logged in, redirect to dashboard
+                    {/* ------------------------------Routes---------------------------------- */}
                     <Route exact path="/login">
                         {user.id ? <Redirect to="/dashboard" /> : <LoginPage />}
                     </Route>
-                    <Route exact path="/registration">
+                    {/* If the user is NOT logged in and selects signup, it will redirect to signup */}
+                    <Route exact path="/signup">
                         {user.id ? (
                             <Redirect to="/dashboard" />
                         ) : (
                             <RegisterPage />
                         )}
                     </Route>
-                    <Route exact path="/home">
-                        {user.id ? (
-                            // If the user is already logged in,
-                            // redirect them to the dashboard
-                            <Redirect to="/dashboard" />
-                        ) : (
-                            // Otherwise, show the login page
-                            <LoginPage />
-                        )}
-                    </Route>
-                    {/* If none of the other routes matched, we will show a 404. */}
-                    <Route>
-                        <h1>404 ERROR</h1>
+                    {/* If user is NOT logged in and they try to access ANY page, redirect to <LoginPage/> */}
+                    <Route path="/">
+                        {user.id ? <Redirect to="/login" /> : <LoginPage />}
                     </Route>
                 </Switch>
             </div>

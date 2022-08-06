@@ -16,7 +16,7 @@ function LoginPage() {
                 <button
                     className="btn_asLink"
                     onClick={() => {
-                        history.push('/registration');
+                        history.push('/signup');
                     }}
                 >
                     <u>Sign Up</u>
