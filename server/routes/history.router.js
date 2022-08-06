@@ -19,10 +19,10 @@ router.get('/', (req, res) => {
 //PUT
 router.put('/:id', (req, res) => {
     // Update my profile name
-    const user = req.body;
-    const id = req.params.id;
+    const user = req.user;
+    // const id = req.params.id;
     const query = `update "user" set "name" = $1 where id = 2;`;
-    pool.query(query, [user.name, id])
+    pool.query(query, [req.body.name, user.id])
         .then((result) => {
             res.sendStatus(200);
         })
