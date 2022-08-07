@@ -16,22 +16,6 @@ router.get('/', (req, res) => {
         });
 });
 
-//PUT
-router.put('/:id', (req, res) => {
-    // Update my profile name
-    const user = req.user;
-    // const id = req.params.id;
-    const query = `update "user" set "name" = $1 where id = 2;`;
-    pool.query(query, [req.body.name, user.id])
-        .then((result) => {
-            res.sendStatus(200);
-        })
-        .catch((error) => {
-            console.log(`Error making database query ${query}`, error);
-            res.sendStatus(500);
-        });
-});
-
 //POST
 router.post('/', (req, res) => {
     //const

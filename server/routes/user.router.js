@@ -50,4 +50,18 @@ router.post('/logout', (req, res) => {
     res.sendStatus(200);
 });
 
+//PUT
+router.put('/:id', (req, res) => {
+    const id = req.params.id;
+    const query = `update "user" set "name" = $1 where id = 2;`;
+    pool.query(query, [req.body.name, id])
+        .then((result) => {
+            res.sendStatus(200);
+        })
+        .catch((error) => {
+            console.log(`Error making database query ${query}`, error);
+            res.sendStatus(500);
+        });
+});
+
 module.exports = router;

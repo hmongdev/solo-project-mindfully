@@ -1,17 +1,19 @@
 const editName = (state = {}, action) => {
-    if (action.type === 'SET_EDIT_NAME') {
-        return action.payload;
-    } else if (action.type === 'EDIT_ONCHANGE') {
-        return {
-            //spread => give me all of the object
-            ...state,
-            //change this one in particular
-            [action.payload.property]: action.payload.value,
-        };
-    } else if (action.type === 'EDIT_CLEAR') {
-        return {};
+    switch (action.type) {
+        case 'SET_EDIT_NAME':
+            return action.payload;
+        case 'EDIT_ONCHANGE':
+            return {
+                //spread => give me all of the object
+                ...state,
+                //change this one in particular
+                [action.payload.property]: action.payload.value,
+            };
+        case 'EDIT_CLEAR':
+            return {};
+        default:
+            return state;
     }
-    return state;
 };
 
 export default editName;

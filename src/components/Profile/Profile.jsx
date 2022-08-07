@@ -42,9 +42,16 @@ export default function Profile() {
 
     function handleSubmitName(event) {
         event.preventDefault();
+        //SAVE THE NAME in reducer
+        dispatch({
+            type: 'SET_EDIT_NAME',
+            payload: editName,
+        });
+        console.log(`what is user id`, user.id);
+        console.log(`what is editName`, editName);
         // PUT REQUEST
         axios
-            .put(`/history/${user.id}`, editName)
+            .put(`/user/${user.id}`, editName)
             .then((response) => {
                 // clean up reducer data
                 dispatch({ type: 'EDIT_CLEAR' });
@@ -64,7 +71,7 @@ export default function Profile() {
             <div className="settings-container">
                 <ul>
                     <h1 className="greeting">
-                        Hello,{' '}
+                        Hello, {}
                         {edit ? (
                             <>
                                 <form
