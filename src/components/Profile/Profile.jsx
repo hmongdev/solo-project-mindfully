@@ -5,6 +5,7 @@ import Navbar from '../Navbar/Navbar';
 import './Profile.css';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import axios from 'axios';
+import { SettingsSystemDaydreamRounded } from '@mui/icons-material';
 
 export default function Profile() {
     const user = useSelector((store) => store.user);
@@ -19,6 +20,7 @@ export default function Profile() {
 
     //local state
     const [edit, setEdit] = useState(false);
+    const [name, setName] = useState('');
 
     const handleDeleteAccount = () => {
         // alert('Are you sure you want to delete your account?');
@@ -33,34 +35,25 @@ export default function Profile() {
         history.push('/');
     };
 
-    function handleChange(event, property) {
-        dispatch({
-            type: 'EDIT_ONCHANGE',
-            payload: { property: property, value: event.target.value },
-        });
-    }
+    // function handleChange(event, property) {
+    //     dispatch({
+    //         type: 'EDIT_ONCHANGE',
+    //         payload: { property: property, value: event.target.value },
+    //     });
+    // }
 
     function handleSubmitName(event) {
         event.preventDefault();
-        //SAVE THE NAME in reducer
-        dispatch({
-            type: 'SET_EDIT_NAME',
-            payload: editName,
-        });
+
         console.log(`what is user id`, user.id);
-        console.log(`what is editName`, editName);
-        // PUT REQUEST
-        axios
-            .put(`/user/${user.id}`, editName)
-            .then((response) => {
-                // clean up reducer data
-                dispatch({ type: 'EDIT_CLEAR' });
-                // refresh will happen with useEffect on Home
-                history.push('/profile');
-            })
-            .catch((error) => {
-                console.log('error on PUT: ', error);
-            });
+        console.log(`what is editName`, name);
+        dispatch({
+            type: 'UPDATE_NAME',
+            payload: {
+                id: user.id,
+                name: name,
+            },
+        });
         setEdit(false);
     }
 
@@ -80,11 +73,11 @@ export default function Profile() {
                                 >
                                     <input
                                         className="edit-input"
-                                        onChange={(event) =>
-                                            handleChange(event, 'name')
+                                        onChange={(e) =>
+                                            setName(e.target.value)
                                         }
                                         placeholder={user.name}
-                                        value={editName.name}
+                                        value={name}
                                     />
                                     <button
                                         className="edit-submit"
