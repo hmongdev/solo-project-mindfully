@@ -28,26 +28,22 @@ export default function Dashboard() {
         <div>
             <p className="view-title">Dashboard</p>
             <table className="dashboard-container">
-                <tbody>
-                    {historyList.map((detail) => {
-                        return (
-                            <>
-                                <tr className="date">{detail.created}</tr>
-                                <tr
-                                    key={detail.id}
-                                    onClick={() =>
-                                        handleHistoryDetail(detail.id)
-                                    }
-                                >
-                                    <td className="emoji">{detail.feeling}</td>
-                                    <td className="reflection">
-                                        {detail.reflection}
-                                    </td>
-                                </tr>
-                            </>
-                        );
-                    })}
-                </tbody>
+                {historyList.map((detail, i) => {
+                    return (
+                        <tbody key={i}>
+                            <tr
+                                key={detail.id}
+                                onClick={() => handleHistoryDetail(detail.id)}
+                            >
+                                <td className="emoji">{detail.feeling}</td>
+                                <td className="date">{detail.created}</td>
+                                <td className="reflection">
+                                    {detail.reflection}
+                                </td>
+                            </tr>
+                        </tbody>
+                    );
+                })}
             </table>
             <Navbar />
         </div>

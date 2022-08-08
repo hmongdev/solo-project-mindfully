@@ -12,12 +12,6 @@ figcaption {
     padding: 1rem;
 }
 
-tr.date {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
 blockquote {
     font-size: large;
 }
@@ -44,13 +38,24 @@ td {
     padding-top: 1rem;
 }
 
+td.date {
+    white-space: nowrap;
+    /* overflow: hidden; */
+    /* text-overflow: ellipsis; */
+    display: inline-block;
+}
+
 td.emoji {
+    display: inline;
     font-size: 5rem;
     width: 7rem;
 }
 
 td.reflection {
     text-align: left;
-    text-overflow: ellipsis;
+    overflow: hidden;
     white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: calc(90%);
 }
