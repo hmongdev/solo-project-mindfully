@@ -45,7 +45,6 @@ export default function Profile() {
     return (
         <>
             <p className="view-title">Profile</p>
-
             <div className="settings-container">
                 <ul>
                     <h1 className="greeting">

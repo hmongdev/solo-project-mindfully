@@ -9,8 +9,13 @@ import ReplyRoundedIcon from '@mui/icons-material/ReplyRounded';
 export default function NavbarDetail() {
     const history = useHistory();
 
+    const handleDeleteDetail = () => {
+        console.log(`is this deleting?`);
+        // history.push('/dashboard');
+    };
+
     return (
-        <div className='navbar-detail-container'>
+        <div className="navbar-detail-container">
             <button
                 className="navbar-detail"
                 onClick={() => {
@@ -22,12 +27,7 @@ export default function NavbarDetail() {
                 />
                 Return
             </button>
-            <button
-                className="navbar-detail"
-                onClick={() => {
-                    history.push('/dashboard');
-                }}
-            >
+            <button className="navbar-detail" onClick={handleDeleteDetail}>
                 <DeleteForeverIcon style={{ fontSize: 60, color: 'maroon' }} />
                 Delete
             </button>
