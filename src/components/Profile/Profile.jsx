@@ -39,7 +39,7 @@ export default function Profile() {
                 name: name,
             },
         });
-        setEdit(false);
+        setEdit(!edit);
     }
 
     return (
@@ -82,7 +82,7 @@ export default function Profile() {
                         )}
                     </h1>
                     <li>
-                        <button onClick={() => setEdit(true)}>
+                        <button onClick={() => setEdit(!edit)}>
                             <span>Edit Name</span>
                         </button>
                     </li>
