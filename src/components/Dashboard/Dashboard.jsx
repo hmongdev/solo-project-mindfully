@@ -32,7 +32,7 @@ export default function Dashboard() {
                     {historyList.map((detail) => {
                         return (
                             <>
-                                <tr className="date">{detail.date_created}</tr>
+                                <tr className="date">{detail.created}</tr>
                                 <tr
                                     key={detail.id}
                                     onClick={() =>
