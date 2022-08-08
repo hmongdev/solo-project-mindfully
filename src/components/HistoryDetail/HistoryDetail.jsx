@@ -14,11 +14,11 @@ export default function HistoryDetail() {
             type: 'FETCH_DETAIL',
             payload: id,
         });
-    }, []);
+    }, [dispatch, id]);
 
     return (
         <>
-            <p className="view-title">{detail[0].date_created}</p>
+            <h1 className="date-title">{detail[0].date_created}</h1>
             <div className="main-container">
                 <h1 className="detail-heading">I felt...</h1>
                 <li className="emoji">{detail[0]?.feeling}</li>

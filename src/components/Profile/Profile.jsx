@@ -4,27 +4,22 @@ import { useHistory, useParams } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import './Profile.css';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import axios from 'axios';
-import { SettingsSystemDaydreamRounded } from '@mui/icons-material';
 
 export default function Profile() {
     const user = useSelector((store) => store.user);
     const dispatch = useDispatch();
     const history = useHistory();
-    const editName = useSelector((store) => store.editName);
 
     //useEffect
     useEffect(() => {
-        dispatch({ type: 'FETCH_HISTORY' });
-    }, []);
+        dispatch({ type: 'UPDATE_NAME' });
+    }, [user, dispatch]);
 
     //local state
     const [edit, setEdit] = useState(false);
     const [name, setName] = useState('');
 
     const handleDeleteAccount = () => {
-        // alert('Are you sure you want to delete your account?');
-        //This is where I left off on feature/deleteAccount
         dispatch({
             type: 'DELETE_ACCOUNT',
         });
@@ -35,18 +30,8 @@ export default function Profile() {
         history.push('/');
     };
 
-    // function handleChange(event, property) {
-    //     dispatch({
-    //         type: 'EDIT_ONCHANGE',
-    //         payload: { property: property, value: event.target.value },
-    //     });
-    // }
-
     function handleSubmitName(event) {
         event.preventDefault();
-
-        console.log(`what is user id`, user.id);
-        console.log(`what is editName`, name);
         dispatch({
             type: 'UPDATE_NAME',
             payload: {
@@ -55,6 +40,8 @@ export default function Profile() {
             },
         });
         setEdit(false);
+        //how do I force the page to reload? useEffect?
+        window.location.reload(true);
     }
 
     return (
@@ -73,8 +60,8 @@ export default function Profile() {
                                 >
                                     <input
                                         className="edit-input"
-                                        onChange={(e) =>
-                                            setName(e.target.value)
+                                        onChange={(event) =>
+                                            setName(event.target.value)
                                         }
                                         placeholder={user.name}
                                         value={name}

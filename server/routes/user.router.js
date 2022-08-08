@@ -52,13 +52,11 @@ router.post('/logout', (req, res) => {
 });
 
 //PUT
-router.put(`/:id`, (req, res) => {
-    console.log(req.body);
-    const query = `update "user" set "name" = '$1' where id = $2;`;
-
-    pool.query(query, [req.body.name, req.body.id])
+router.put('/:id', (req, res) => {
+    const id = req.params.id;
+    const query = `update "user" set "name" = $1 where id = $2;`;
+    pool.query(query, [req.body.name, id])
         .then((result) => {
-            console.log(`what is here?`);
             res.sendStatus(200);
         })
         .catch((error) => {
