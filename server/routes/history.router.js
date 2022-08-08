@@ -44,4 +44,21 @@ router.post('/', (req, res) => {
         });
 }); // END GET Route
 
+// DEL
+router.delete('/:id', (req, res) => {
+    // endpoint functionality
+    const itemId = req.params.id;
+    const userId = req.user.id;
+    const queryText = `delete from history where id = $1 and user_id = $2;`;
+    //databse columns have to match redux object from dispatch payload (ShelfForm.jsx)
+    pool.query(queryText, [itemId, userId])
+        .then((result) => {
+            res.send(result.rows);
+        })
+        .catch((err) => {
+            console.log(`DELETE ERR in history.router`, err);
+            res.sendStatus(500);
+        });
+});
+
 module.exports = router;
