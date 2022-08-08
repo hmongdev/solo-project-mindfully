@@ -13,7 +13,7 @@ export default function Profile() {
     //useEffect
     useEffect(() => {
         dispatch({ type: 'UPDATE_NAME' });
-    }, [user, dispatch]);
+    }, [dispatch]);
 
     //local state
     const [edit, setEdit] = useState(false);
@@ -33,15 +33,13 @@ export default function Profile() {
     function handleSubmitName(event) {
         event.preventDefault();
         dispatch({
-            type: 'UPDATE_NAME',
+            type: 'PUT_NAME',
             payload: {
                 id: user.id,
                 name: name,
             },
         });
         setEdit(false);
-        //how do I force the page to reload? useEffect?
-        window.location.reload(true);
     }
 
     return (

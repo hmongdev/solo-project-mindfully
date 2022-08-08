@@ -25,7 +25,7 @@ function* fetchUser() {
 }
 
 //PUT
-function* updateName(action) {
+function* putName(action) {
     console.log(action.payload);
     try {
         const response = yield axios.put(
@@ -33,7 +33,7 @@ function* updateName(action) {
             action.payload
         );
         yield put({
-            type: 'FETCH_HISTORY',
+            type: 'FETCH_USER',
             payload: response.data,
         });
     } catch (err) {
@@ -43,7 +43,7 @@ function* updateName(action) {
 
 function* userSaga() {
     yield takeLatest('FETCH_USER', fetchUser);
-    yield takeLatest('UPDATE_NAME', updateName);
+    yield takeLatest('PUT_NAME', putName);
 }
 
 export default userSaga;
