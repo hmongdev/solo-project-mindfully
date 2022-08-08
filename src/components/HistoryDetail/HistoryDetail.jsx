@@ -33,7 +33,7 @@ export default function HistoryDetail() {
                     <li className="gratitude">{detail[0]?.gratitude3}</li>
                 </ol>
             </div>
-            <NavbarDetail />
+            <NavbarDetail item={detail[0]} />
         </>
     );
 }
