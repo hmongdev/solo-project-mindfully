@@ -1,6 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 require('dotenv').config();
+//-----------------------SPOTIFY SDK SETUP-----------------------------//
+const dotenv = require('dotenv');
+dotenv.config();
+
+var spotify_client_id = process.env.SPOTIFY_CLIENT_ID;
+var spotify_client_secret = process.env.SPOTIFY_CLIENT_SECRET;
+//-----------------------SPOTIFY SDK SETUP-----------------------------//
 
 const app = express();
 
@@ -27,6 +34,12 @@ app.use(passport.session());
 app.use('/api/user', userRouter);
 app.use('/api/history', historyRouter);
 app.use('/api/detail', detailRouter);
+
+//-----------------------SPOTIFY SDK SETUP-----------------------------//
+// Spotify get requests
+app.get('/auth/login', (req, res) => {});
+app.get('/auth/callback', (req, res) => {});
+//-----------------------SPOTIFY SDK SETUP-----------------------------//
 
 // Serve static files
 app.use(express.static('build'));
