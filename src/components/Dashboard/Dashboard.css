@@ -47,6 +47,7 @@ td.date {
 
 td.emoji {
     display: inline;
+    padding-right: 1rem;
     font-size: 5rem;
     width: 7rem;
 }
