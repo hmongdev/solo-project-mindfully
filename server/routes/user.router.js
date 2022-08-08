@@ -1,4 +1,5 @@
 const express = require('express');
+const { useSelector } = require('react-redux');
 const {
     rejectUnauthenticated,
 } = require('../modules/authentication-middleware');
@@ -48,6 +49,20 @@ router.post('/logout', (req, res) => {
     // Use passport's built-in method to log out the user
     req.logout();
     res.sendStatus(200);
+});
+
+//PUT
+router.put('/:id', (req, res) => {
+    const id = req.params.id;
+    const query = `update "user" set "name" = $1 where id = $2;`;
+    pool.query(query, [req.body.name, id])
+        .then((result) => {
+            res.sendStatus(200);
+        })
+        .catch((error) => {
+            console.log(`Error making database query ${query}`, error);
+            res.sendStatus(500);
+        });
 });
 
 module.exports = router;

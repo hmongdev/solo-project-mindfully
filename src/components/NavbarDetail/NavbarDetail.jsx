@@ -10,7 +10,7 @@ export default function NavbarDetail() {
     const history = useHistory();
 
     return (
-        <div>
+        <div className='navbar-detail-container'>
             <button
                 className="navbar-detail"
                 onClick={() => {
