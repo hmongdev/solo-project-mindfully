@@ -2,12 +2,13 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../modules/pool');
 
-//GET
+//GET all checkins for one user
 router.get('/', (req, res) => {
     const id = req.user.id;
-    const query = `select * from history where user_id = ${id};`;
-    pool.query(query)
+    const query = `select * from history, to_char(history.date_created, 'Dy Mon d, yy - hh12:mi AM') as created where user_id = $1;`;
+    pool.query(query, [id])
         .then((result) => {
+            console.log(`this is what im sending:`, result.rows);
             res.send(result.rows);
         })
         .catch((error) => {
