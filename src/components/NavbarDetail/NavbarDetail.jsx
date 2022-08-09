@@ -8,7 +8,6 @@ import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import ReplyRoundedIcon from '@mui/icons-material/ReplyRounded';
 
 export default function NavbarDetail({ item }) {
-    const user = useSelector((store) => store.user);
     const history = useHistory();
     const dispatch = useDispatch();
 
