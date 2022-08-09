@@ -3,6 +3,8 @@ const express = require('express');
 const cors = require('cors');
 const lyricsFinder = require('lyrics-finder');
 const SpotifyWebApi = require('spotify-web-api-node');
+//added this here because a youtube comment said express() is deprecated -- might not need
+app.use(express.json());
 
 // Body parser middleware
 const bodyParser = require('body-parser');
