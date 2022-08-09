@@ -7,15 +7,30 @@ import './NavbarDetail.css';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import ReplyRoundedIcon from '@mui/icons-material/ReplyRounded';
 
+import Swal from 'sweetalert2';
+
 export default function NavbarDetail({ item }) {
     const user = useSelector((store) => store.user);
     const history = useHistory();
     const dispatch = useDispatch();
 
     function handleDelete() {
-        dispatch({
-            type: 'DELETE_ITEM',
-            payload: item.id,
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire('Deleted!', 'Your file has been deleted.', 'success');
+                dispatch({
+                    type: 'DELETE_ITEM',
+                    payload: item.id,
+                });
+            }
         });
         history.push('/dashboard');
     }
