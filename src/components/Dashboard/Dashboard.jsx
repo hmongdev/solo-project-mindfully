@@ -5,7 +5,7 @@ import '../Dashboard/Dashboard.css';
 import Navbar from '../Navbar/Navbar';
 import { useHistory } from 'react-router-dom';
 
-export default function Dashboard() {
+export default function Dashboard({ code }) {
     const historyList = useSelector((store) => store.historyList);
     const dispatch = useDispatch();
     const history = useHistory();
@@ -27,7 +27,7 @@ export default function Dashboard() {
     return (
         <div>
             <p className="view-title">Dashboard</p>
-            <table className="dashboard-container">
+            <table className="dashboard-container rounded">
                 {historyList.map((detail, i) => {
                     return (
                         <tbody key={i}>
