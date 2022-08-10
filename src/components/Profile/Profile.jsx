@@ -86,13 +86,13 @@ export default function Profile() {
                             <span>Edit Name</span>
                         </button>
                     </li>
-                    <hr></hr>
+                    <hr className="mx-auto"></hr>
                     <li>
                         <button onClick={handleLogOut}>
                             <span>Log Out</span>
                         </button>
                     </li>
-                    <hr></hr>
+                    <hr className="mx-auto"></hr>
                     <li>
                         <button
                             className="btn-delete"

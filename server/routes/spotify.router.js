@@ -25,8 +25,8 @@ app.post('/refresh', (req, res) => {
         .refreshAccessToken()
         .then((data) => {
             res.json({
-                accessToken: data.body.access_token,
-                expiresIn: data.body.expires_in,
+                accessToken: data.body.accessToken,
+                expiresIn: data.body.expiresIn,
             });
         })
         .catch((err) => {
@@ -66,33 +66,4 @@ app.get('/lyrics', async (req, res) => {
 
 //---------------SPOTIFY WEB API END-----------------//
 
-const sessionMiddleware = require('./modules/session-middleware');
-const passport = require('./strategies/user.strategy');
-
-// Route includes
-const userRouter = require('./routes/user.router');
-const historyRouter = require('./routes/history.router');
-const detailRouter = require('./routes/detail.router');
-
-// Passport Session Configuration //
-app.use(sessionMiddleware);
-
-// start up passport sessions
-app.use(passport.initialize());
-app.use(passport.session());
-
-/* Routes */
-app.use('/api/user', userRouter);
-app.use('/api/history', historyRouter);
-app.use('/api/detail', detailRouter);
-
-// Serve static files
-app.use(express.static('build'));
-
-// App Set //
-const PORT = process.env.PORT || 5000;
-
-/** Listen * */
-app.listen(PORT, () => {
-    console.log(`Listening on port: ${PORT}`);
-});
+module.exports = router;
