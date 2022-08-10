@@ -10,7 +10,6 @@ import ReplyRoundedIcon from '@mui/icons-material/ReplyRounded';
 import Swal from 'sweetalert2';
 
 export default function NavbarDetail({ item }) {
-    const user = useSelector((store) => store.user);
     const history = useHistory();
     const dispatch = useDispatch();
 
