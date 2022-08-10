@@ -6,7 +6,6 @@ import './NavbarDetail.css';
 //mui
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import ReplyRoundedIcon from '@mui/icons-material/ReplyRounded';
-
 import Swal from 'sweetalert2';
 
 export default function NavbarDetail({ item }) {
