@@ -23,8 +23,8 @@ li.emoji {
 }
 li.reflection,
 li.gratitude {
-    font-size: 1.5rem;
-    color: rgb(215, 215, 215);
+    font-size: 2rem;
+    color: rgba(215, 215, 215, 0.761);
 }
 
 .detail-heading {
@@ -34,7 +34,7 @@ li.gratitude {
 }
 
 h1.date-title {
-    font-size: 3rem;
-    padding: 0;
-    margin: 3rem 0;
+    font-family: 'Square Peg', cursive;
+    font-size: 4rem;
+    margin: 4rem;
 }

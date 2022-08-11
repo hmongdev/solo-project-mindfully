@@ -1,5 +1,12 @@
 .navbar-detail-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    bottom: 10vh;
+    left: 30%;
+}
+
+.navbar-home-button,
+.navbar-delete-button {
+    display: inline-flex;
+    margin: 5rem;
 }

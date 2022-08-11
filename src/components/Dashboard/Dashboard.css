@@ -6,67 +6,42 @@
     padding: 1rem;
 }
 
-table.dashboard-container {
-    overflow: scroll;
-    overflow-x: hidden;
-    width: 90vw;
-    height: 70vh;
-    border: 3px solid rgba(233, 146, 227, 0.4);
-    border-radius: 3rem;
-    padding-top: 5rem;
-}
-
-blockquote,
-figcaption {
-    text-align: center;
-    padding: 1rem;
-}
-
-blockquote {
-    font-size: large;
-}
-
-figcaption {
-    font-size: medium;
-}
-
-table {
+table.historylist {
     margin: auto;
+    overflow: scroll;
+    width: 90vw;
+    height: 10rem;
+    border: 0.3rem solid rgba(233, 146, 227, 0.3);
+    border-radius: 3rem;
+    padding-top: 1rem;
 }
 
 tr {
-    text-align: left;
     font-size: 5vw;
-    /* keep these so white-space:nowrap works */
+    margin: auto;
+    width: 70vw;
     display: table;
-    width: 100%;
     table-layout: fixed;
-    padding: 0 2rem;
 }
 
 td {
     padding-top: 1rem;
 }
 
-td.date {
+td.date,
+td.emoji,
+td.reflection {
     white-space: nowrap;
-    /* overflow: hidden; */
-    /* text-overflow: ellipsis; */
     display: inline-block;
 }
 
 td.emoji {
-    display: inline;
-    padding-right: 1rem;
     font-size: 5rem;
-    width: 7rem;
 }
 
 td.reflection {
     text-align: left;
     overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
     text-overflow: ellipsis;
-    width: calc(90%);
+    width: calc(80%);
 }

@@ -27,7 +27,7 @@ export default function Dashboard({ code }) {
     return (
         <div>
             <p className="view-title">Dashboard</p>
-            <table className="dashboard-container rounded">
+            <table className="historylist">
                 {historyList.map((detail, i) => {
                     return (
                         <tbody key={i}>
