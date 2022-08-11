@@ -5,7 +5,7 @@ import LoginSpotify from '../LoginSpotify/LoginSpotify';
 //this is the actual player
 import SpotifyPlayer from '../SpotifyPlayer/SpotifyPlayer';
 
-//this is grabbing from the URL AFTER authentication
+//! 2. this is grabbing from the URL AFTER authentication
 //we pass this as a prop so the SpotifyPlayer can use it
 const code = new URLSearchParams(window.location.search).get('code');
 

@@ -1,12 +1,14 @@
 require('dotenv').config();
 const express = require('express');
+//this package solves the cors errors
 const cors = require('cors');
 const lyricsFinder = require('lyrics-finder');
 const SpotifyWebApi = require('spotify-web-api-node');
 
 // Body parser middleware
-const bodyParser = require('body-parser');
+// bodyParser solves the issue of not being able to read property of 'code' which is json encoded
 const app = express();
+const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
@@ -35,21 +37,24 @@ app.post('/refresh', (req, res) => {
         });
 });
 
+//! 1. part of the auth request to allow SpotifyAPI
 app.post('/login', (req, res) => {
+    // code is a json object
     const code = req.body.code;
+    //req with what we're sending to the API
     const spotifyApi = new SpotifyWebApi({
         redirectUri: process.env.REDIRECT_URI,
         clientId: process.env.CLIENT_ID,
         clientSecret: process.env.CLIENT_SECRET,
     });
-
     spotifyApi
+        //this is a promise => receive access and resfresh token when successful
         .authorizationCodeGrant(code)
         .then((data) => {
             res.json({
                 accessToken: data.body.access_token,
                 refreshToken: data.body.refresh_token,
-                expiresIn: data.body.expires_in,
+                expiresIn: data.body.expires_in, //expires in 1 hour or 3600 seconds
             });
         })
         .catch((err) => {

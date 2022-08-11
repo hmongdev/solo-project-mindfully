@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import { useEffect, useState } from 'react';
 
 export default function LoginSpotify() {
     const AUTH_URL =
