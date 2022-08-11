@@ -3,7 +3,7 @@ import Navbar from '../Navbar/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 //this is the login button to authenticate the user
 import LoginSpotify from '../LoginSpotify/LoginSpotify';
-import Code from '../Code/Code';
+import SpotifyPlayer from '../SpotifyPlayer/SpotifyPlayer';
 
 //App.js file
 
@@ -12,7 +12,11 @@ export default function Practices() {
     return (
         <div>
             <p className="view-title">Practices</p>
-            {code ? <Code code={code} /> : <LoginSpotify />}
+            {code ? (
+                <SpotifyPlayer className="w-100 mx-auto p-3" code={code} />
+            ) : (
+                <LoginSpotify />
+            )}
             <Navbar />
         </div>
     );
