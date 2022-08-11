@@ -38,7 +38,9 @@ export default function Dashboard({ code }) {
                             >
                                 <td className="date">{detail.created}</td>
                                 <td className="reflection">
-                                    <td className="emoji">{detail.feeling}</td>
+                                    <span className="emoji">
+                                        {detail.feeling}
+                                    </span>
                                     {detail.reflection}
                                 </td>
                             </tr>

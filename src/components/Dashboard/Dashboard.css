@@ -37,7 +37,7 @@ td.reflection {
     margin: auto;
 }
 
-td.emoji {
+span.emoji {
     display: inline;
     font-size: 5rem;
     padding-right: 2rem;
