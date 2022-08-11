@@ -33,11 +33,12 @@ export default function Dashboard({ code }) {
                         <tbody key={i}>
                             <tr
                                 key={detail.id}
+                                className="detail-container"
                                 onClick={() => handleHistoryDetail(detail.id)}
                             >
-                                <td className="emoji">{detail.feeling}</td>
                                 <td className="date">{detail.created}</td>
                                 <td className="reflection">
+                                    <td className="emoji">{detail.feeling}</td>
                                     {detail.reflection}
                                 </td>
                             </tr>

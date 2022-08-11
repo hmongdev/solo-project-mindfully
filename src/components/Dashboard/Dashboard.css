@@ -7,19 +7,20 @@
 }
 
 table.historylist {
+    display: block;
     margin: auto;
-    overflow: scroll;
+    overflow-y: auto;
+    border-collapse: collapse;
     width: 90vw;
-    height: 10rem;
-    border: 0.3rem solid rgba(233, 146, 227, 0.3);
+    height: 75vh;
+    border: 0.5rem outset rgba(233, 146, 227, 0.3);
     border-radius: 3rem;
     padding-top: 1rem;
 }
 
 tr {
     font-size: 5vw;
-    margin: auto;
-    width: 70vw;
+    width: 80vw;
     display: table;
     table-layout: fixed;
 }
@@ -32,11 +33,14 @@ td.date,
 td.emoji,
 td.reflection {
     white-space: nowrap;
-    display: inline-block;
+    display: block;
+    margin: auto;
 }
 
 td.emoji {
+    display: inline;
     font-size: 5rem;
+    padding-right: 2rem;
 }
 
 td.reflection {
@@ -44,4 +48,10 @@ td.reflection {
     overflow: hidden;
     text-overflow: ellipsis;
     width: calc(80%);
+}
+
+.detail-container {
+    border-radius: 3rem;
+    margin: 1rem;
+    background-color: rgba(220, 28, 146, 0.391);
 }
