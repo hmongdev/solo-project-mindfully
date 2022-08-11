@@ -6,11 +6,10 @@ import { Container, Form } from 'react-bootstrap';
 import SpotifyWebApi from 'spotify-web-api-node';
 import axios from 'axios';
 
-const spotifyApi = new SpotifyWebApi({
-    clientId: '218e4b111a3c45bb9c394966af04924c',
-});
-
-export default function Code({ code }) {
+export default function SpotifyPlayer({ code }) {
+    const spotifyApi = new SpotifyWebApi({
+        clientId: '4b42633281ef4a1ebc3b7359ebb42b4e',
+    });
     const accessToken = useAuth(code);
     const [search, setSearch] = useState('');
     const [searchResults, setSearchResults] = useState([]);
