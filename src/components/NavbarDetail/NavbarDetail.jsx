@@ -34,9 +34,9 @@ export default function NavbarDetail({ item }) {
     }
 
     return (
-        <div className="navbar-detail-container">
+        <div className="navbar-detail">
             <button
-                className="navbar-detail"
+                className="navbar-home-button"
                 onClick={() => {
                     history.push('/dashboard');
                 }}
@@ -46,7 +46,7 @@ export default function NavbarDetail({ item }) {
                 />
                 Return
             </button>
-            <button className="navbar-detail" onClick={handleDelete}>
+            <button className="navbar-delete-button" onClick={handleDelete}>
                 <DeleteForeverIcon style={{ fontSize: 60, color: 'maroon' }} />
                 Delete
             </button>
