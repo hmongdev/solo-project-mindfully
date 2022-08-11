@@ -24,3 +24,9 @@
     width: 100%;
     padding: 1rem 0;
 }
+
+.search-results {
+    font-size: 3rem;
+    overflow-y: auto;
+    height: 50vh;
+}
