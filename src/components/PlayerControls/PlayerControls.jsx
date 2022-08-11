@@ -8,14 +8,16 @@ export default function PlayerControls({ accessToken, trackUri }) {
 
     if (!accessToken) return null;
     return (
-        <SpotifyPlayer
-            token={accessToken}
-            showSaveIcon
-            callback={(state) => {
-                if (!state.isPlaying) setPlay(false);
-            }}
-            play={play}
-            uris={trackUri ? [trackUri] : []}
-        />
+        <>
+            <SpotifyPlayer
+                token={accessToken}
+                showSaveIcon
+                callback={(state) => {
+                    if (!state.isPlaying) setPlay(false);
+                }}
+                play={play}
+                uris={trackUri ? [trackUri] : []}
+            />
+        </>
     );
 }

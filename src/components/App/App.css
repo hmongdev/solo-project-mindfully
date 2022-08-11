@@ -148,11 +148,12 @@ Form Treatment
 
 input,
 input.btn {
-    font-size: 3rem;
-    width: 70vw;
+    font-size: 2.5rem;
+    text-overflow: ellipsis;
+    min-width: 70vw;
     text-align: center;
     margin: 0.5rem;
-    border-radius: 1rem;
+    border-radius: 5rem;
 }
 
 input,

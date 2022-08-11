@@ -5,6 +5,7 @@ import TrackSearchResult from '../TrackSearchResult/TrackSearchResult';
 import { Container, Form } from 'react-bootstrap';
 import SpotifyWebApi from 'spotify-web-api-node';
 import axios from 'axios';
+import './SpotifyPlayer.css';
 
 const spotifyApi = new SpotifyWebApi({
     clientId: '4b42633281ef4a1ebc3b7359ebb42b4e',
@@ -76,10 +77,7 @@ export default function SpotifyPlayer({ code }) {
     }, [search, accessToken]);
 
     return (
-        <Container
-            className="d-flex flex-column py-2"
-            style={{ height: '100vh' }}
-        >
+        <Container className="spotify-player" style={{ height: '75vh' }}>
             <Form.Control
                 type="search"
                 placeholder="Search Songs/Artists"
@@ -87,12 +85,6 @@ export default function SpotifyPlayer({ code }) {
                 onChange={(e) => setSearch(e.target.value)}
             />
             <div className="flex-grow-1 my-2" style={{ overflowY: 'auto' }}>
-                <div>
-                    <PlayerControls
-                        accessToken={accessToken}
-                        trackUri={playingTrack?.uri}
-                    />
-                </div>
                 {searchResults.map((track) => (
                     <TrackSearchResult
                         track={track}
@@ -101,10 +93,19 @@ export default function SpotifyPlayer({ code }) {
                     />
                 ))}
                 {searchResults.length === 0 && (
-                    <div className="text-center" style={{ whiteSpace: 'pre' }}>
+                    <div
+                        className="lyrics-container"
+                        style={{ whiteSpace: 'pre' }}
+                    >
                         {lyrics}
                     </div>
                 )}
+            </div>
+            <div className="player-controls">
+                <PlayerControls
+                    accessToken={accessToken}
+                    trackUri={playingTrack?.uri}
+                />
             </div>
         </Container>
     );
