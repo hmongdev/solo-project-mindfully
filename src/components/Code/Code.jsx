@@ -5,28 +5,15 @@ import TrackSearchResult from '../TrackSearchResult/TrackSearchResult';
 import { Container, Form } from 'react-bootstrap';
 import SpotifyWebApi from 'spotify-web-api-node';
 import axios from 'axios';
-import '../SpotifyPlayer/SpotifyPlayer.css';
 
 export default function SpotifyPlayer({ code }) {
-<<<<<<< HEAD:src/components/Code/Code.jsx
     const spotifyApi = new SpotifyWebApi({
         clientId: '4b42633281ef4a1ebc3b7359ebb42b4e',
     });
-=======
-    //connecting clientId with the SpotifyWebAPI
-    const spotifyApi = new SpotifyWebApi({
-        clientId: '218e4b111a3c45bb9c394966af04924c',
-    });
-    //used for authentication
->>>>>>> main:src/components/SpotifyPlayer/SpotifyPlayer.jsx
     const accessToken = useAuth(code);
-
-    //for the search input
     const [search, setSearch] = useState('');
     const [searchResults, setSearchResults] = useState([]);
-    //for seeing which track is playing
     const [playingTrack, setPlayingTrack] = useState();
-    //for setting the lyrics
     const [lyrics, setLyrics] = useState('');
 
     function chooseTrack(track) {
@@ -37,7 +24,7 @@ export default function SpotifyPlayer({ code }) {
 
     useEffect(() => {
         if (!playingTrack) return;
-        //axios call to our server for the lyrics of THAT song
+
         axios
             .get('http://localhost:3000/lyrics', {
                 params: {
@@ -92,16 +79,10 @@ export default function SpotifyPlayer({ code }) {
         >
             <Form.Control
                 type="search"
-                placeholder="Search By Song or Artist"
+                placeholder="Search Songs/Artists"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
             />
-            <div>
-                <Player
-                    accessToken={accessToken}
-                    trackUri={playingTrack?.uri}
-                />
-            </div>
             <div className="flex-grow-1 my-2" style={{ overflowY: 'auto' }}>
                 {searchResults.map((track) => (
                     <TrackSearchResult
@@ -115,6 +96,12 @@ export default function SpotifyPlayer({ code }) {
                         {lyrics}
                     </div>
                 )}
+            </div>
+            <div>
+                <Player
+                    accessToken={accessToken}
+                    trackUri={playingTrack?.uri}
+                />
             </div>
         </Container>
     );
