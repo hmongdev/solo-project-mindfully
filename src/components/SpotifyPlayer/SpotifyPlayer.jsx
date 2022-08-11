@@ -10,11 +10,14 @@ const spotifyApi = new SpotifyWebApi({
     clientId: '4b42633281ef4a1ebc3b7359ebb42b4e',
 });
 
-export default function Code({ code }) {
+export default function SpotifyPlayer({ code }) {
     const accessToken = useAuth(code);
+    //for the search input
     const [search, setSearch] = useState('');
     const [searchResults, setSearchResults] = useState([]);
+    //for seeing which track is playing
     const [playingTrack, setPlayingTrack] = useState();
+    //for setting the lyrics
     const [lyrics, setLyrics] = useState('');
 
     function chooseTrack(track) {
@@ -25,7 +28,6 @@ export default function Code({ code }) {
 
     useEffect(() => {
         if (!playingTrack) return;
-
         axios
             .get('http://localhost:3000/lyrics', {
                 params: {
