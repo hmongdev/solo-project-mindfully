@@ -5,7 +5,7 @@ const pool = require('../modules/pool');
 //GET all checkins for one user
 router.get('/', (req, res) => {
     const id = req.user.id;
-    const query = `select * from history, to_char(history.date_created, 'Dy Mon d, yy - hh12:mi AM') as created where user_id = $1;`;
+    const query = `select * from history, to_char(history.date_created, 'Dy Mon d, yy - hh12:mi AM') as created where user_id = $1 order by history.date_created desc;`;
     pool.query(query, [id])
         .then((result) => {
             res.send(result.rows);
