@@ -5,12 +5,10 @@ import React from 'react';
 // It doesn't dispatch any redux actions or display any part of redux state
 // or even care what the redux state is, so it doesn't need 'connect()'
 
-function Footer() {
+export default function Footer() {
     return (
         <center>
             Read our <u>Terms</u> and <u>Privacy Policy</u>
         </center>
     );
 }
-
-export default Footer;
