@@ -84,7 +84,7 @@ export default function SpotifyPlayer({ code }) {
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
             />
-            <div className="flex-grow-1 my-2" style={{ overflowY: 'auto' }}>
+            <div className="search-results">
                 {searchResults.map((track) => (
                     <TrackSearchResult
                         track={track}

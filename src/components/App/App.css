@@ -80,7 +80,7 @@ Button
     font-family: 'Montserrat', sans-serif;
     font-size: 2.7rem;
     padding: 1rem 3rem;
-    color: black;
+    color: white;
     border-radius: 5rem;
     border: 2px solid black;
     background: #1bd760;
@@ -150,7 +150,7 @@ input,
 input.btn {
     font-size: 2.5rem;
     text-overflow: ellipsis;
-    min-width: 70vw;
+    width: 75vw;
     text-align: center;
     margin: 0.5rem;
     border-radius: 5rem;
