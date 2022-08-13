@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { useHistory } from 'react-router-dom';
 import '../Navbar/Navbar.css';
-import { useState } from 'react';
 
 //mui
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
@@ -15,38 +14,39 @@ export default function Navbar() {
     return (
         <div className="navbar">
             <button
-                className="nav-button"
+                className="clicked"
                 onClick={() => {
                     history.push('/dashboard');
                 }}
             >
-                <HomeIcon style={{ fontSize: 60 }} />
+                <HomeIcon className="clicked" sx={{ fontSize: 60 }} />
                 Dashboard
             </button>
             <button
-                className="nav-button"
+                className="clicked"
                 onClick={() => {
                     history.push('/practices');
                 }}
             >
-                <PsychologyIcon style={{ fontSize: 60 }} />
+                <PsychologyIcon sx={{ fontSize: 60 }} />
                 Practices
             </button>
             <button
-                className="nav-button"
+                className="clicked"
                 onClick={() => {
                     history.push('/profile');
                 }}
             >
-                <AccountCircleIcon style={{ fontSize: 60 }} />
+                <AccountCircleIcon sx={{ fontSize: 60 }} />
                 Profile
             </button>
             <button
+                className="clicked"
                 onClick={() => {
                     history.push('/feeling');
                 }}
             >
-                <FormatListBulletedIcon style={{ fontSize: 60 }} />
+                <FormatListBulletedIcon sx={{ fontSize: 60 }} />
                 Checkins
             </button>
         </div>
