@@ -44,11 +44,11 @@ export default function Gratitude() {
     };
 
     const handleSecretButton = () => {
-        setGratitude1(`So glad I did the difficult thing`);
+        setGratitude1(`Finally ran a 10k!`);
         setGratitude2(
-            `I was kind to myself today by taking breaks and drinking water!`
+            `Roommate made cookies!`
         );
-        setGratitude3(`I accepted what I can't change and let go my anxiety`);
+        setGratitude3(`I spent time with family :)`);
     };
 
     return (
@@ -81,9 +81,10 @@ export default function Gratitude() {
                     />
                     Back
                 </button>
-                <button className="secret-button" onClick={handleSecretButton}>
-                    Secret Button
-                </button>
+                <button
+                    className="secret-button"
+                    onClick={handleSecretButton}
+                ></button>
                 <button onClick={handleSubmit}>
                     <CheckCircleIcon
                         style={{ fontSize: 60, color: 'limegreen' }}

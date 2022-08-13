@@ -9,7 +9,7 @@ export default function AboutPage() {
         <>
             <h1 className="view-title">Technologies Used</h1>
             <p>React</p>
-            <p>Redux</p>
+            <p>Redux-Sagas</p>
             <p>Express</p>
             <p>Node</p>
             <p>MUI</p>
@@ -24,8 +24,12 @@ export default function AboutPage() {
             </ul>
             <h1 className="view-title">Thanks</h1>
             <ul>
-                <p>Prime</p>
-                <p>Jemisin & Liz</p>
+                <p>Jemisin Cohort</p>
+                <p>
+                    Liz, Dane, Bethany, Christy<br></br>Matt, Edan, Angie, Kris,
+                    Mark, etc.
+                </p>
+                <p>Everyone at Prime</p>
                 <p>Family & Friends</p>
             </ul>
             <button

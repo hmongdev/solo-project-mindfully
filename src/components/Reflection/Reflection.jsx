@@ -32,7 +32,7 @@ export default function Reflection() {
 
     const handleSecretButton = () => {
         setReflection(
-            `I had a a really difficult day today, made time to meditate, and made a decision not to beat myself up. I'm feeling so much better.`
+            `I meditated, danced in the kitchen, and spoke with my sister. She and her partner just got back from Vegas, and they had a blast! They almost got attacked by a crow lol :)`
         );
     };
 
@@ -58,9 +58,10 @@ export default function Reflection() {
                     />
                     Back
                 </button>
-                <button className="secret-button" onClick={handleSecretButton}>
-                    Secret Button
-                </button>
+                <button
+                    className="secret-button"
+                    onClick={handleSecretButton}
+                ></button>
                 <button onClick={handleNext}>
                     <KeyboardArrowRightIcon
                         style={{ fontSize: 60, color: 'limegreen' }}
