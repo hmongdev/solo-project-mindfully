@@ -50,8 +50,9 @@ td.reflection {
     width: calc(80%);
 }
 
-.detail-container {
+tr.detail-container {
     border-radius: 3rem;
-    margin: 1rem;
-    background-color: rgba(220, 28, 146, 0.391);
+    margin: 2rem 1rem;
+    background-color: rgba(220, 28, 146, 0.2);
+    box-shadow: 5px 5px 15px black;
 }

@@ -30,6 +30,12 @@ export default function Reflection() {
         history.push('/gratitude');
     };
 
+    const handleSecretButton = () => {
+        setReflection(
+            `I had a a really difficult day today, made time to meditate, and made a decision not to beat myself up. I'm feeling so much better.`
+        );
+    };
+
     return (
         <div>
             <p className="view-title">How was your day?</p>
@@ -41,6 +47,7 @@ export default function Reflection() {
                         type="text"
                         placeholder="What happened? What did you do today?"
                         onChange={(event) => setReflection(event.target.value)}
+                        value={reflection}
                     />
                 </form>
             </div>
@@ -50,6 +57,9 @@ export default function Reflection() {
                         style={{ fontSize: 60, color: 'yellow' }}
                     />
                     Back
+                </button>
+                <button className="secret-button" onClick={handleSecretButton}>
+                    Secret Button
                 </button>
                 <button onClick={handleNext}>
                     <KeyboardArrowRightIcon

@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 
-function LoginPage() {
+export default function LoginPage() {
     const history = useHistory();
 
     return (
@@ -26,5 +26,3 @@ function LoginPage() {
         </div>
     );
 }
-
-export default LoginPage;

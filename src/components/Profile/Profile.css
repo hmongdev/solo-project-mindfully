@@ -5,6 +5,10 @@ li {
     padding: 1rem;
 }
 
+li.list {
+    font-size: large;
+}
+
 hr {
     width: 80vw;
     border: 1px solid #c2c2c2;

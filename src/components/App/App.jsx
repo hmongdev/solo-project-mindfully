@@ -19,6 +19,7 @@ import Practices from '../Practices/Practices';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import HistoryDetail from '../HistoryDetail/HistoryDetail';
+import AboutPage from '../AboutPage/AboutPage';
 
 import './App.css';
 
@@ -81,6 +82,9 @@ function App() {
                         ) : (
                             <RegisterPage />
                         )}
+                    </Route>
+                    <Route exact path="/about">
+                        {user.id ? <Redirect to="/about" /> : <AboutPage />}
                     </Route>
                     {/* If user is NOT logged in and they try to access ANY page, redirect to <LoginPage/> */}
                     <Route path="/">

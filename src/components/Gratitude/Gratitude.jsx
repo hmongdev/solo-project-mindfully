@@ -43,6 +43,14 @@ export default function Gratitude() {
         history.push('/dashboard');
     };
 
+    const handleSecretButton = () => {
+        setGratitude1(`So glad I did the difficult thing`);
+        setGratitude2(
+            `I was kind to myself today by taking breaks and drinking water!`
+        );
+        setGratitude3(`I accepted what I can't change and let go my anxiety`);
+    };
+
     return (
         <div>
             <p className="view-title">What are you grateful for?</p>
@@ -72,6 +80,9 @@ export default function Gratitude() {
                         style={{ fontSize: 60, color: 'yellow' }}
                     />
                     Back
+                </button>
+                <button className="secret-button" onClick={handleSecretButton}>
+                    Secret Button
                 </button>
                 <button onClick={handleSubmit}>
                     <CheckCircleIcon
