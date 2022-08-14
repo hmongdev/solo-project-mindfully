@@ -18,7 +18,3 @@ button {
     border: none;
     color: white;
 }
-
-.clicked:active {
-    color: #cfa9b6;
-}
