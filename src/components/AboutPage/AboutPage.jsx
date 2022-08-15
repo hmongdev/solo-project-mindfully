@@ -24,6 +24,7 @@ export default function AboutPage() {
             </ul>
             <h1 className="view-title">Thanks</h1>
             <ul>
+                <p>Mentors</p>
                 <p>Jemisin Cohort</p>
                 <p>Liz, Dane, and Matt</p>
                 <p>Everyone at Prime</p>
