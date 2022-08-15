@@ -12,6 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
 //---------------SPOTIFY WEB API START-----------------//
+//this is for the refresh
 app.post('/refresh', (req, res) => {
     const refreshToken = req.body.refreshToken;
     const spotifyApi = new SpotifyWebApi({
@@ -35,6 +36,7 @@ app.post('/refresh', (req, res) => {
         });
 });
 
+//this is for the login
 app.post('/login', (req, res) => {
     const code = req.body.code;
     const spotifyApi = new SpotifyWebApi({
@@ -57,6 +59,7 @@ app.post('/login', (req, res) => {
         });
 });
 
+//this will search for lyrics via the lyricsFinder api
 app.get('/lyrics', async (req, res) => {
     const lyrics =
         (await lyricsFinder(req.query.artist, req.query.track)) ||

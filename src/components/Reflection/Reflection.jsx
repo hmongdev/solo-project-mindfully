@@ -30,12 +30,6 @@ export default function Reflection() {
         history.push('/gratitude');
     };
 
-    const handleSecretButton = () => {
-        setReflection(
-            `I was worried about picking up groceries and felt a slight pressure on my chest. I was able to observe my thoughts, sensations, and let it go by the end of the practice.`
-        );
-    };
-
     return (
         <div>
             <p className="view-title">Observations</p>
@@ -58,10 +52,6 @@ export default function Reflection() {
                     />
                     Back
                 </button>
-                <button
-                    className="secret-button"
-                    onClick={handleSecretButton}
-                ></button>
                 <button onClick={handleNext}>
                     <KeyboardArrowRightIcon
                         style={{ fontSize: 60, color: 'limegreen' }}
