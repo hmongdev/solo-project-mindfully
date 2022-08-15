@@ -33,7 +33,7 @@ export default function Feeling() {
 
     return (
         <>
-            <p className="view-title">How are you feeling?</p>
+            <p className="view-title">How did you feel?</p>
             <div className="main-container">
                 <ul>
                     <button
@@ -130,11 +130,13 @@ export default function Feeling() {
             </div>
             <div className="nav-container">
                 <button onClick={handleCancel}>
-                    <CancelIcon style={{ fontSize: 60 }} />
+                    <CancelIcon style={{ fontSize: 60, color: 'maroon' }} />
                     Cancel
                 </button>
                 <button onClick={handleNext}>
-                    <KeyboardArrowRightIcon style={{ fontSize: 60 }} />
+                    <KeyboardArrowRightIcon
+                        style={{ fontSize: 60, color: 'limegreen' }}
+                    />
                     Next
                 </button>
             </div>

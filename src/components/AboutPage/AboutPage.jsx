@@ -25,10 +25,7 @@ export default function AboutPage() {
             <h1 className="view-title">Thanks</h1>
             <ul>
                 <p>Jemisin Cohort</p>
-                <p>
-                    Liz, Dane, Bethany, Christy<br></br>Matt, Edan, Angie, Kris,
-                    Mark, etc.
-                </p>
+                <p>Liz, Dane, and Matt</p>
                 <p>Everyone at Prime</p>
                 <p>Family & Friends</p>
             </ul>

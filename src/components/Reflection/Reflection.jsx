@@ -32,20 +32,20 @@ export default function Reflection() {
 
     const handleSecretButton = () => {
         setReflection(
-            `I meditated, danced in the kitchen, and spoke with my sister. She and her partner just got back from Vegas, and they had a blast! They almost got attacked by a crow lol :)`
+            `I was worried about picking up groceries and felt a slight pressure on my chest. I was able to observe my thoughts, sensations, and let it go by the end of the practice.`
         );
     };
 
     return (
         <div>
-            <p className="view-title">How was your day?</p>
+            <p className="view-title">Observations</p>
             <div className="main-container">
                 <p className="view-title">{date}</p>
                 <form onSubmit={handleNext}>
                     <textarea
                         className="reflection"
                         type="text"
-                        placeholder="What happened? What did you do today?"
+                        placeholder="Where did you notice in your body? What were your thoughts?"
                         onChange={(event) => setReflection(event.target.value)}
                         value={reflection}
                     />

@@ -82,7 +82,7 @@ export default function SpotifyPlayer({ code }) {
                 type="search"
                 placeholder="Search Songs/Artists"
                 value={search}
-                onChange={(e) => setSearch(e.target.value)}
+                onChange={(e) => setSearch('quick mindfulness')}
             />
             <div className="search-results">
                 {searchResults.map((track) => (

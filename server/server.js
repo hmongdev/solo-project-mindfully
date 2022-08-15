@@ -65,7 +65,7 @@ app.post('/login', (req, res) => {
 app.get('/lyrics', async (req, res) => {
     const lyrics =
         (await lyricsFinder(req.query.artist, req.query.track)) ||
-        'Focus on your breathing';
+        'Take a moment to find \n comfort in your body. \n Notice what you are \n thinking, feeling, and sensing. \n Where does it sit in your body?';
     res.json({ lyrics });
 });
 

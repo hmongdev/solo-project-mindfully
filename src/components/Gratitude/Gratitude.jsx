@@ -44,11 +44,9 @@ export default function Gratitude() {
     };
 
     const handleSecretButton = () => {
-        setGratitude1(`Finally ran a 10k!`);
-        setGratitude2(
-            `Roommate made cookies!`
-        );
-        setGratitude3(`I spent time with family :)`);
+        setGratitude1(`Glad my family is here for me!`);
+        setGratitude2(`My caring, supportive partner`);
+        setGratitude3(`Seeing my friends tonight!`);
     };
 
     return (

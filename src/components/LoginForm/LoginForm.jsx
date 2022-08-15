@@ -38,7 +38,7 @@ function LoginForm() {
                         placeholder="Username"
                         required
                         value={username}
-                        onChange={(event) => setUsername(event.target.value)}
+                        onChange={(event) => setUsername('SlappedHam')}
                     />
                 </div>
                 <div>
@@ -47,7 +47,7 @@ function LoginForm() {
                         placeholder="Password"
                         required
                         value={password}
-                        onChange={(event) => setPassword(event.target.value)}
+                        onChange={(event) => setPassword('asdfjkl;')}
                     />
                 </div>
                 <div>

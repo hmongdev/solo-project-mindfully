@@ -60,7 +60,7 @@ app.post('/login', (req, res) => {
 app.get('/lyrics', async (req, res) => {
     const lyrics =
         (await lyricsFinder(req.query.artist, req.query.track)) ||
-        'Focus on your breathing';
+        'Focus on your breathing.';
     res.json({ lyrics });
 });
 
