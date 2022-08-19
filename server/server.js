@@ -1,5 +1,4 @@
 require('dotenv').config();
-import express from 'express';
 const express = require('express');
 //this package solves the cors errors
 const cors = require('cors');
