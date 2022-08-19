@@ -1,4 +1,6 @@
-require('dotenv').config();
+// require('dotenv').config();
+import 'dotenv/config' // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
+import express from 'express'
 const express = require('express');
 //this package solves the cors errors
 const cors = require('cors');
